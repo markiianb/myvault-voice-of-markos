@@ -1,0 +1,166 @@
+# Voice of Markos — Retrieval Rules v2.1
+#
+# Task profiles for producing content and engagement from Markos's LinkedIn account
+# and personal blog. Parent rules still apply — banned words, confidence-over-fear,
+# Two-Pass Self-Audit, Final Test.
+#
+# constraint_mode:
+#   strict   — full enforcement of parent style rules (use for edits and review)
+#   standard — parent rules + Markos overrides (default for drafting)
+#   flexible — brainstorming only
+#
+# v2.1 (2026-04-20): Added markos_blog_post and markos_blog_edit profiles.
+#   Edit profile now includes edit-craft's Pass 0 preservation scan by default.
+#
+# v2.0 (2026-04-16): Rewritten for consolidated 13-chunk structure. Old chunk IDs
+#   (voice-markos, boundaries, banned-and-allowed, never-engage, opinion-map,
+#   positions-by-pillar, story-library, voice-by-mode, positioning-markos,
+#   voice-antipatterns-markos, markos-about) replaced with new IDs matching
+#   consolidated files.
+
+version: "2.1"
+last_updated: "2026-04-20"
+
+task_profiles:
+
+  markos_anchor_post:
+    description: "Long-form opinion-led LinkedIn post from Markos's account"
+    register: authority
+    constraint_mode: standard
+    always_load:
+      - "voice"
+      - "antipatterns"
+      - "identity"
+      - "guardrails"
+      - "post-craft"
+    load_if_relevant:
+      - "audience-linkedin"
+      - "opinions"
+      - "stories"
+    parent_chunks_if_relevant:
+      - "product-core"
+      - "product-agents"
+    token_budget: 7000
+
+  markos_newsjack:
+    description: "<24h reaction post to AI/privacy industry news"
+    register: authority
+    constraint_mode: standard
+    always_load:
+      - "voice"
+      - "antipatterns"
+      - "opinions"
+      - "guardrails"
+      - "newsjack-craft"
+    load_if_relevant:
+      - "identity"
+      - "stories"
+    token_budget: 5500
+
+  markos_build_note:
+    description: "Short insight post from founder experience"
+    register: authority
+    constraint_mode: standard
+    always_load:
+      - "voice"
+      - "antipatterns"
+      - "guardrails"
+      - "post-craft"
+    load_if_relevant:
+      - "stories"
+      - "identity"
+    token_budget: 5000
+
+  markos_comment:
+    description: "Substantive comment on another account's post"
+    register: authority
+    constraint_mode: standard
+    always_load:
+      - "voice"
+      - "guardrails"
+      - "comment-craft"
+    load_if_relevant:
+      - "opinions"
+      - "target-accounts"
+      - "stories"
+      - "antipatterns"
+    token_budget: 4000
+
+  markos_reply:
+    description: "Reply to a comment on Markos's own post"
+    register: authority
+    constraint_mode: standard
+    always_load:
+      - "voice"
+      - "guardrails"
+      - "comment-craft"
+    load_if_relevant:
+      - "opinions"
+      - "antipatterns"
+    token_budget: 3500
+
+  markos_brainstorm:
+    description: "Brainstorm post angles and content directions"
+    constraint_mode: flexible
+    always_load:
+      - "identity"
+      - "opinions"
+      - "guardrails"
+    load_if_relevant:
+      - "stories"
+      - "audience-linkedin"
+    token_budget: 5500
+
+  markos_edit:
+    description: "Review and refine a Markos LinkedIn draft. Pass 0 preservation + six critique passes. Opinion + story activation scans run first."
+    constraint_mode: strict
+    always_load:
+      - "voice"
+      - "antipatterns"
+      - "edit-craft"
+      - "guardrails"
+      - "opinions"
+      - "stories"
+    parent_chunks_if_relevant:
+      - "constraints-messaging"
+      - "constraints-style"
+      - "ai-slop-detection"
+    token_budget: 6500
+
+  markos_blog_post:
+    description: "Long-form blog post under Markos's byline — standard, series pillar, or founder-log update."
+    register: authority
+    constraint_mode: standard
+    always_load:
+      - "voice"
+      - "antipatterns"
+      - "identity"
+      - "guardrails"
+      - "blog-craft"
+      - "post-craft"
+      - "opinions"
+      - "stories"
+    load_if_relevant:
+      - "audience-linkedin"
+    parent_chunks_if_relevant:
+      - "product-core"
+      - "product-agents"
+    token_budget: 9000
+
+  markos_blog_edit:
+    description: "Review and refine a Markos blog draft. Pass 0 preservation + six critique passes + blog-specific failure patterns + pre-publish checklist."
+    constraint_mode: strict
+    always_load:
+      - "voice"
+      - "antipatterns"
+      - "edit-craft"
+      - "blog-craft"
+      - "guardrails"
+      - "opinions"
+      - "stories"
+      - "identity"
+    parent_chunks_if_relevant:
+      - "constraints-messaging"
+      - "constraints-style"
+      - "ai-slop-detection"
+    token_budget: 8000

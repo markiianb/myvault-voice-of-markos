@@ -1,0 +1,103 @@
+brand: "Voice of Markos"
+parent_brand: "MyVault"
+version: "2.1"
+last_updated: "2026-04-20"
+total_chunks: 15
+voice_holder: "Markos Symeonides"
+steward: "Mark Bobyliak"
+changelog:
+  - "2.1 (2026-04-20): Added blog-craft.md (new chunk). Edit-craft gained Pass 0 preservation scan. Opinions and Stories each gained an activation scan at the top. Guardrails Red Zone gained reasoning-category tags and four new rules (vendor-dependency, paraphrased-as-quote, bio claim fact-check, named-vendor-in-failure). Voice gained WHY lines on never-preach, preach phrases, and final test. Derived from 2026-04-20 review-comparison cycle on Markos's enterprise-AI-governance blog."
+  - "2.0 (2026-04-16): Consolidated from 19 chunks to 13. Identity, voice, opinions, stories, guardrails each merged into single files. Antipatterns moved from voice/ to craft/. Manifest, retrieval rules, CLAUDE.md, README.md rewritten."
+  - "1.2 (2026-04-15): Added edit-craft.md. Added voice-antipatterns-markos.md."
+  - "1.0 (2026-04-14): Initial 17 chunks built from Apr 10 voice session."
+
+chunks:
+  voice:
+    path: "voice/voice.md"
+    domain: "voice"
+    summary: "How Markos sounds. Tone, four voice qualities, three modes + never-preach, five failure portraits, banned words, rhythm, length rules, the Markos Final Test."
+    token_count: 1200
+
+  identity:
+    path: "identity/identity.md"
+    domain: "identity"
+    summary: "Who Markos is. Bio, credentials, positioning, authority claim, six anchors, anti-positioning, audience segments, disclosure rules."
+    token_count: 1000
+
+  opinions:
+    path: "opinions/opinions.md"
+    domain: "opinions"
+    summary: "What Markos believes. Quick gate table (Strong/Mild/No-opinion per topic), eight pillar sections with thesis, sound-bites, story references, red lines."
+    token_count: 2500
+
+  stories:
+    path: "stories/stories.md"
+    domain: "stories"
+    summary: "Twelve indexed personal stories with pillar tags, Green/Yellow/Red status, verbatim quotes, caution flags, deploy angles."
+    token_count: 1300
+
+  guardrails:
+    path: "guardrails/guardrails.md"
+    domain: "guardrails"
+    summary: "Red/Yellow/Green zones, never-engage exclusion list (IFS etc.), personal comfort matrix, escalation protocol, the wince test."
+    token_count: 1100
+
+  audience-linkedin:
+    path: "audience/audience-linkedin.md"
+    domain: "audience"
+    summary: "Five audience segments on Markos's LinkedIn. Audience-to-content matching. What does not land."
+    token_count: 450
+
+  antipatterns:
+    path: "craft/antipatterns.md"
+    domain: "craft"
+    summary: "Before/after casebook for the five failure portraits. Quick scan checklist, self-audit, Conversation Test, LA Story Test, Final Test."
+    token_count: 950
+
+  post-craft:
+    path: "craft/post-craft.md"
+    domain: "craft"
+    summary: "How a Markos post gets built. Anchor / Newsjack / Build-Note formats. Opening, body, close patterns. Draft-to-publish sequence."
+    token_count: 800
+
+  comment-craft:
+    path: "craft/comment-craft.md"
+    domain: "craft"
+    summary: "Four kudos-first comment frameworks: Agree-and-Add, Share-Experience, Question-and-Extend, Another-Angle. Universal rules, escalation triggers."
+    token_count: 650
+
+  newsjack-craft:
+    path: "craft/newsjack-craft.md"
+    domain: "craft"
+    summary: "Reacting to AI/privacy news within 24h. Five-part arc, preach test, eligible topics, turnaround SLAs."
+    token_count: 500
+
+  edit-craft:
+    path: "craft/edit-craft.md"
+    domain: "craft"
+    summary: "Pass 0 preservation scan + six critique passes. Flattening tests, Conversation Test, pre-write and self-review checklists. The anti-AI editor."
+    token_count: 1000
+
+  blog-craft:
+    path: "craft/blog-craft.md"
+    domain: "craft"
+    summary: "Blog format rules — length, pull quotes, TOC, heading hierarchy, series identity, dual titles (editorial + SEO), internal linking, lead capture, third-person bio, blog-specific failure patterns, pre-publish checklist."
+    token_count: 700
+
+  target-accounts:
+    path: "playbooks/target-accounts.md"
+    domain: "playbooks"
+    summary: "Six categories of accounts for regular engagement. Quality markers, review cadence. Named list placeholder."
+    token_count: 500
+
+  daily-routine:
+    path: "playbooks/daily-routine.md"
+    domain: "playbooks"
+    summary: "Daily volume caps, time-of-day rules, posting schedule, voice consistency checks, engagement loop."
+    token_count: 450
+
+  approval-workflow:
+    path: "playbooks/approval-workflow.md"
+    domain: "playbooks"
+    summary: "Monday rhythm, three-tier comment approval, Slack flag comms, one-Linear-task-per-week cap, four-month trust progression."
+    token_count: 650

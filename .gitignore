@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Obsidian
+.obsidian/
+
+# Node (if a renderer / tool surface gets added later)
+node_modules/
+dist/
+.env
+.env.local
