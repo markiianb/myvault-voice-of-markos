@@ -30,6 +30,14 @@ Zero stories deployed on a directly-on-topic draft is a failure. Markos's author
 
 ---
 
+## Scope: stories are post material
+
+**This file is loaded for post tasks, not comment tasks.** The `markos_comment` and `markos_reply` profiles in `_retrieval-rules.yaml` do not include this chunk. Stories carry credential weight that belongs in long-form posts where Markos is the speaker — not in comments where the post author is the speaker and Markos is a reader.
+
+If you are drafting a comment and find yourself reaching for a story, something has been wrongly loaded. Reload only the comment-task chunks (`voice`, `guardrails`, `comment-craft`, optionally `opinions` and `antipatterns`) and start over. See `craft/comment-craft.md` v2.1 § "What a comment is not for" and `craft/antipatterns.md` § The Expertise Platform.
+
+---
+
 ### 1. The $100k Google Cloud Fraud
 **Status:** Yellow (first full public telling needs framing sign-off)
 **Pillars:** `#big-tech-accountability` `#consumer-data-rights` `#platform-liability` `#ai-personal-advocacy`

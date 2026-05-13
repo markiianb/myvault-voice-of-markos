@@ -18,8 +18,15 @@
 #   voice-antipatterns-markos, markos-about) replaced with new IDs matching
 #   consolidated files.
 
-version: "2.1"
-last_updated: "2026-04-20"
+version: "2.2"
+last_updated: "2026-05-13"
+
+# v2.2 (2026-05-13): markos_comment and markos_reply no longer load `stories`.
+#   Stories are post material — credentials and lived-experience anecdotes
+#   belong in long-form posts where Markos is the speaker, not in comments
+#   where the post author is the speaker. Driven by 20-comment audit
+#   (2026-05-12). See craft/comment-craft.md v2.1 and stories/stories.md
+#   top-section scope note.
 
 task_profiles:
 
@@ -72,7 +79,7 @@ task_profiles:
     token_budget: 5000
 
   markos_comment:
-    description: "Substantive comment on another account's post"
+    description: "Substantive comment on another account's post. Stories NOT loaded — the post is the input, not Markos's history."
     register: authority
     constraint_mode: standard
     always_load:
@@ -82,12 +89,13 @@ task_profiles:
     load_if_relevant:
       - "opinions"
       - "target-accounts"
-      - "stories"
       - "antipatterns"
-    token_budget: 4000
+    # NOT loaded: stories, identity. Comments engage with the post, not the
+    # commenter's resume. See comment-craft.md v2.1.
+    token_budget: 3500
 
   markos_reply:
-    description: "Reply to a comment on Markos's own post"
+    description: "Reply to a comment on Markos's own post. Stories NOT loaded — reply to what the commenter said."
     register: authority
     constraint_mode: standard
     always_load:
@@ -97,7 +105,8 @@ task_profiles:
     load_if_relevant:
       - "opinions"
       - "antipatterns"
-    token_budget: 3500
+    # NOT loaded: stories, identity.
+    token_budget: 3000
 
   markos_brainstorm:
     description: "Brainstorm post angles and content directions"

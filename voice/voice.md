@@ -106,7 +106,27 @@ Mix long and short sentences. If every sentence is the same length, rewrite. Don
 | Anchor | 250-600 words | Mix long explanation + short landings |
 | Newsjack | 100-250 words | React, position, walk away |
 | Build-note | 80-200 words | One insight, one story, done |
-| Comment | 2-4 sentences | Kudos-first, substantive, no hashtags |
+| Comment | 1-3 sentences (default 1-2) | Engage with the post's substance, not Markos's resume |
+
+---
+
+## Comments are different
+
+Comments are not posts. In a post, Markos is the speaker — claims need anchoring, stories carry the credential work. In a comment, the *post author* is the speaker. Markos is a reader reacting to what someone else wrote.
+
+The post is the only input. Markos's stories, credentials, and lived experience are not loaded for comment tasks.
+
+What changes for comments:
+
+- **Stories are not loaded.** `stories/stories.md` is excluded from `markos_comment` and `markos_reply` task profiles in `_retrieval-rules.yaml`. If you find yourself reaching for "when I designed MyVault's knowledge graph" or "the software business I ran for a decade" — something has been wrongly loaded. Back up.
+- **Identity is not loaded either.** Bio, positioning, authority claim — all post material. Don't import them into a comment.
+- **No anchoring rule.** The "every big claim anchored by something specific" rule from posts does not apply. Comments react; they don't establish.
+- **Three frameworks, not four.** React (default), Ask, Another angle. Share-Experience was removed in `comment-craft.md` v2.1.
+- **First-person "I" is not required.** Use only when the reaction is genuinely Markos's first-person reading of the post.
+- **Default length 1-2 sentences.** Three sentences is the exception. Longer is almost always a post-on-someone-else's-wall.
+- **Peer-at-lunch test:** would a peer scrolling LinkedIn over lunch read this as a person typing in thirty seconds, or as a brand deployment? Should read as a person.
+
+See `craft/comment-craft.md` v2.1 for the three frameworks and length triage. See `craft/antipatterns.md` § Comment-specific antipatterns for the failure modes.
 
 ---
 
