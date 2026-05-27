@@ -1,11 +1,13 @@
 ---
 chunk_id: "identity"
-version: "1.1"
-last_updated: "2026-05-11"
+version: "1.2"
+last_updated: "2026-05-27"
 status: "active"
 ---
 
 # Identity
+
+> **Canonical extension (2026-05-27):** see [[markos-origin-story]] for the structured origin narrative + verbatim quotes extracted from Markos's May 2026 TSH presentation. That doc is the source of truth for biographical specifics (Edinburgh attic origins, father's first computing-science degree in Scotland, $100K GCP fraud incident, 12-year-old son with Claude/Lovable subscriptions, the 1995 → 2023 → today Life-App-PRD arc). **Do not invent biographical specifics that are not documented in either file.**
 
 ## Bio
 
