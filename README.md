@@ -38,6 +38,15 @@ It follows the same pattern as the Private by Design Newsletter: self-contained 
 | **playbooks/** | `daily-routine.md` | Volume caps, time-of-day rules, posting schedule |
 | **playbooks/** | `target-accounts.md` | Six engagement categories, quality markers, review cadence |
 
+## Output logs
+
+Two running logs hold every piece of Markos-bylined content:
+
+- `markos-linkedin-posts-log.md` — short-form LinkedIn posts (anchor / newsjack / build-note). Prep + scheduled dates, full body inline, newest at top.
+- `markos-linkedin-articles-log.md` — long-form LinkedIn articles. Same structure plus editorial + SEO titles, reading time, pull-quote markers.
+
+These are records, not retrieval chunks. Load them when answering "what has Markos posted lately?" — not when drafting a new post. The chunks to load for drafting are in the table above.
+
 ## Inheritance from MyVault parent brand-system
 
 The parent brand-system at `10-Brand/brand-system/` provides the foundational rules that apply to **all** MyVault-adjacent content, including Markos's LinkedIn. These still apply:

@@ -24,6 +24,8 @@ The operational system for Markos Symeonides's LinkedIn presence and personal bl
 
 **Checking approval / cadence / accounts:** `playbooks/approval-workflow.md` + `playbooks/daily-routine.md` + `playbooks/target-accounts.md`
 
+**Checking what's been posted recently:** `markos-linkedin-posts-log.md` for short-form (anchor / newsjack / build-note) + `markos-linkedin-articles-log.md` for long-form. Newest at top. These are records, not retrieval chunks — load when triaging past activity, not when drafting.
+
 ## Two scans run before every review
 
 Before Pass 1 of any edit, run these in order:
