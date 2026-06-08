@@ -1,7 +1,7 @@
 ---
 chunk_id: "stories"
-version: "1.0"
-last_updated: "2026-04-16"
+version: "1.1"
+last_updated: "2026-06-08"
 status: "active"
 ---
 
@@ -30,11 +30,13 @@ Zero stories deployed on a directly-on-topic draft is a failure. Markos's author
 
 ---
 
-## Scope: stories are post material
+## Scope: stories are post material; gated for comments (v3.0, MVM-153)
 
-**This file is loaded for post tasks, not comment tasks.** The `markos_comment` and `markos_reply` profiles in `_retrieval-rules.yaml` do not include this chunk. Stories carry credential weight that belongs in long-form posts where Markos is the speaker — not in comments where the post author is the speaker and Markos is a reader.
+**For posts, this file is core material** — Markos is the speaker, and stories carry the credential work.
 
-If you are drafting a comment and find yourself reaching for a story, something has been wrongly loaded. Reload only the comment-task chunks (`voice`, `guardrails`, `comment-craft`, optionally `opinions` and `antipatterns`) and start over. See `craft/comment-craft.md` v2.1 § "What a comment is not for" and `craft/antipatterns.md` § The Expertise Platform.
+**For comments, this file loads *conditionally*, behind a gate.** The `markos_comment` and `markos_reply` profiles in `_retrieval-rules.yaml` v2.3 include this chunk in `load_if_relevant`, not `always_load`. Deploy a credential story in a comment **only when the post topic is *at least part* of what the story answers**, and **never reuse the same credential within a short window**. (This reverses the v2.1 blanket exclusion: Markos's own 20-post review found the comment defect was the *contrarian opener*, not the credential — and he endorsed credential stories where the topic fit, e.g. direct-pay and services-scale posts, while declining loose-fit and reuse.)
+
+If you are drafting a comment and a credential surfaces on a post whose topic the story doesn't answer, **the gate failed** — cut it and react to the post instead. See `craft/comment-craft.md` v3.0 § story-gating and `craft/antipatterns.md` § The Ungated Credential.
 
 ---
 

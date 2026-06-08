@@ -1,7 +1,7 @@
 ---
 chunk_id: "guardrails"
-version: "1.0"
-last_updated: "2026-04-16"
+version: "1.1"
+last_updated: "2026-06-08"
 status: "active"
 ---
 
@@ -70,6 +70,16 @@ No likes, no comments, no follows, no replies. Regardless of what they post.
 1. Flag in Slack: *"Exclusion list: [account] commented on [post URL]."*
 2. Do not reply, comment, or like.
 3. If a reply is genuinely needed (e.g. legitimate journalist query), escalate to Markos as Tier 3.
+
+## Comment No-Go Topics (MVM-153)
+
+Topic-level skips that apply specifically to commenting from Markos's account. These are about *what the post is about*, not who posted it.
+
+- **Marketing-tech AI (HubSpot and similar) — skip.** Markos: *"I would stay away from marketing-tech AI posts — what we do there will be a competitor moat — we should keep to ourselves."* Do not comment, even with a good angle.
+- **Off-point posts — skip.** Run the on-point pre-check: is our angle about *this* post's actual substance? If the post is about, say, organizational change and our angle is about tools, it's off point — skip rather than bend the post to our talking point.
+- **Topic lens for posts we do engage:** lead with utility / value / ROI / AI-readiness ahead of privacy/security. Privacy is still true; Markos flagged the system as over-indexed on it.
+
+See `craft/comment-craft.md` v3.0 § When to escalate and § 2026-06-04 refinements.
 
 ## Personal Comfort Matrix
 

@@ -13,8 +13,8 @@ depends_on:
   - "target-accounts"
   - "guardrails"
 token_count: ~450
-version: "1.0"
-last_updated: "2026-04-14"
+version: "1.1"
+last_updated: "2026-06-08"
 status: "active"
 summary: >-
   What good engagement looks like on a typical day from Markos's account. Volume caps, time-of-day rules, posting schedule, end-of-day voice consistency check.
@@ -26,12 +26,19 @@ The goal is engagement that looks human, not industrial. Volume caps exist becau
 
 ## Daily volume caps
 
-- **Comments on target accounts' posts:** 5–10/day max.
+- **Comments on target accounts' posts:** 5–8/day.
 - **Reactions (likes, celebrates):** 10–15/day.
 - **Replies to comments on Markos's own posts:** all comments within 24 hours; within 30 minutes when feasible (first-hour replies boost algorithmic reach ~64%).
-- **Hard cap:** 15 comments total/day. Over 15 signals automation.
-- **Hashtags in comments:** never.
+- **Hard cap:** 7–8 comments total/day. Higher volume reads as automation regardless of writing quality. <!-- confirm next round: Markos's MVM-153 comment-craft reverted to 15; the 2026-05-12 volume-tell finding kept 7–8. Holding 7–8 pending his confirmation. -->
+- **Hashtags in comments:** the generator never adds them. An occasional topical hashtag in Markos's own hand is fine. <!-- confirm next round -->
 - **Tagging people:** only with genuine reason (they're the person being quoted, e.g.).
+
+## How every comment should land (MVM-153)
+
+Two reminders to carry through the day; full rules in `craft/comment-craft.md` v3.0:
+
+- **Lead with the good, never contrarian.** Engage the actual content (and what's behind the link), name something genuinely good, *then* add the take. A harder question comes after engagement, not as the opener.
+- **Topic lens:** lead with utility / value / ROI / AI-readiness ahead of privacy/security. Skip marketing-tech-AI posts (competitor moat) and off-point posts.
 
 ## Time-of-day rules
 

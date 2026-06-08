@@ -1,7 +1,7 @@
 ---
 chunk_id: "antipatterns"
-version: "1.0"
-last_updated: "2026-04-16"
+version: "1.1"
+last_updated: "2026-06-08"
 status: "active"
 ---
 
@@ -166,31 +166,60 @@ If any line fails, rewrite that line -- not the whole piece.
 
 ## Comment-specific antipatterns
 
-*Added 2026-05-13 from the 20-comment audit. These show up in short-form engagement and don't always appear in the Five Failure Portraits above. The Final Test applies, but comments fail in shapes the post-level tests miss.*
+*Originated 2026-05-13 from the 20-comment audit; revised 2026-06-08 (v1.1, MVM-153) after Markos's own 20-post review. These show up in short-form engagement and don't always appear in the Five Failure Portraits above. The Final Test applies, but comments fail in shapes the post-level tests miss.*
 
-The Final Test for comments shifts in one place: claim **2 is downgraded** — the "every big claim anchored by something specific" rule applies when Markos is the speaker (posts), not when he's the reader (comments). Comments don't need anchoring stories.
+The Final Test for comments shifts in one place: claim **2 is downgraded** — the "every big claim anchored by something specific" rule applies when Markos is the speaker (posts), not when he's the reader (comments). A gated credential story is welcome when the post topic fits; it is not *required*.
 
-### The Expertise Platform
+### The Contrarian Opener *(the #1 defect — MVM-153)*
 
-Using the post as a launchpad for Markos's adjacent expertise. The setup quotes the poster; the payload imports Markos's credential. **If you see this in a comment draft, something has been wrongly loaded.** The `markos_comment` retrieval profile (v2.2) does not include `stories/stories.md` or `identity/identity.md`. If a credential appears in a comment, reload only the comment-task chunks (`voice`, `guardrails`, `comment-craft`, optionally `opinions` and `antipatterns`) and start over.
-
-This is not a calibration issue. There is no correct frequency. Comments don't carry Markos's history.
+Opening with an argument *against* the post instead of engaging it. Markos's single biggest correction from his own review: *"a lot of the comments did not address the actual content… they were contrarian and steered to an argument against. Vs calling out something good then giving my own take or lasering in on a specific point to expand on."* Every system — including v2.1 — defaulted to this shape. It is the failure mode to kill first.
 
 **Symptoms:**
 
-- Sentence-pivots: *"In the enterprise software business I ran for a decade…"*, *"When I designed MyVault's knowledge graph…"*, *"We sold a software company my family owned 100%…"*, *"My father used to say…"*
-- Stories from `stories/stories.md` appearing in any comment draft.
-- Comments that would work as standalone LinkedIn posts on Markos's own feed.
+- Openers that argue or reframe before engaging: *"The harder question is…"*, *"But…"*, *"The real issue is…"*, *"Exposing the data is the easy bit…"* as the *first* move.
+- Reacting to the post's headline rather than its actual content (or the content behind its link).
+- A "harder question" that *is* the whole comment, with no genuine engagement first.
 
 **Before:**
-> "The ratio is bigger than most people think. In the enterprise software business I ran for a decade, services ran roughly 15x license revenue — and that was without agents rewriting the workflow itself."
+> "Exposing the data is the easy bit. The harder question is what a permission means when the actor isn't a human…"
 
-**After:**
-> "Services-to-license ratios already ran 10-15x before agents started rewriting the workflow itself. The multiplier looks larger this time, not smaller."
+**After (lead with the good, then the take):**
+> "Exposing the data layer is the easy half — and worth doing. The harder question is what customer outcomes and workflows firms are actually trying to hit with it; with a clear goal, the access has purpose."
 
-The credential is gone. The insight remains. The comment now reads as a reader engaging with the post, not as a brand deploying its CV.
+Engage the content, name what's good, *then* go deeper. A harder question is fine — after the engagement, never as the opener.
 
-**Why this rule is structural:** the 20-comment audit (2026-05-12) found credentials appearing in 4 of 20 comments — Andy Yen, Lenny Rachitsky, Aaron Levie, and Harry Stebbings all received variants of the same family-company-sale or 15x-services-ratio drop in one day's batch. Earlier versions of `comment-craft.md` tried to manage this with usage caps. v2.1 removes the pathway: stories aren't loaded, Share-Experience framework was deleted, identity chunk is excluded. If credentials are surfacing, the chunks loaded are wrong.
+### The Off-Point Comment *(MVM-153)*
+
+Commenting on a post about one thing with an angle about another. On a post about *organizational change*, Markos flagged a tool-focused comment as "off point — it's not about tools, more about organizational change." Before drafting, run the **on-point pre-check**: is our angle about *this* post's actual substance? If not, skip — don't bend the post to our talking point.
+
+**Symptoms:**
+
+- The comment's subject is MyVault's hobby-horse (tools, privacy) when the post is about something else (org change, services, behaviour).
+- The angle would read the same on any post in the category — it isn't responding to *this* one.
+
+**Fix:** re-check the post's real subject. If our angle doesn't fit it, skip the post.
+
+### The Ungated Credential *(revised from "The Expertise Platform")*
+
+Importing a credential story onto a post whose topic the story doesn't answer — or reusing the same credential within a short window. **The credential itself is not the problem; the *gate* is.** Markos's own review proved it: he *kept* the family-company story on direct-pay (Andy Yen) and the 10–15× services ratio on services-scale (Aaron Levie) because the topic fit — and *declined* to reuse the 15× a second time (Harry Stebbings) and *declined* the father/Visa story on a cadence post (Reid Hoffman) because it only loosely fit. So this is a calibration rule, not a prohibition:
+
+- **On-topic + not recently used → deploy.** The story's specificity does the work.
+- **Off-topic, or already used in this batch → drop.** That's when a credential reads as a CV deployment rather than a reader engaging.
+
+`stories` and `identity` load *conditionally* for comments (`_retrieval-rules.yaml` v2.3, `load_if_relevant`). If a credential appears on a post whose topic it doesn't answer, the gate failed — cut it.
+
+**Symptoms (of the *failure* — ungated use):**
+
+- A credential pivot (*"In the enterprise software business I ran…"*, *"My father used to say…"*) on a post the story doesn't actually speak to.
+- The same credential dropped on multiple posts in one day's batch.
+
+**Before (ungated — services credential on a post not about services):**
+> "Customer agents surface knowledge-base gaps. In the enterprise software business I ran for a decade, services ran roughly 15x license revenue…"
+
+**After (gated out — topic doesn't fit; engage the post instead):**
+> "Customer agents reliably surface every knowledge-base gap the team had been silently working around. That tends to be bigger than the deflection number."
+
+**Why the rule changed:** the 2026-05-12 audit read "credentials in 4 of 20 comments" as the defect and v2.1 removed the pathway entirely. Markos's 2026-06-04 review *endorsed* two of those four (topic fit) and rejected reuse on a third — proving the defect was the missing **gate**, not the credential. v3.0 restores the pathway with the gate.
 
 ### The Template Kudos
 

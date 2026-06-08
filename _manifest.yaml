@@ -1,11 +1,13 @@
 brand: "Voice of Markos"
 parent_brand: "MyVault"
-version: "2.1"
-last_updated: "2026-04-20"
+version: "2.3"
+last_updated: "2026-06-08"
 total_chunks: 15
 voice_holder: "Markos Symeonides"
 steward: "Mark Bobyliak"
 changelog:
+  - "2.3 (2026-06-08, MVM-153): Comment-system reconciliation — integrated Markos's 20-post review (2026-06-04), reversing the v2.1 architecture. comment-craft.md → v3.0 (RESTORES the four kudos-first frameworks + gated credential stories that v2.1 removed; adds lead-with-the-good/engage-the-content opening with the contrarian opener banned as the #1 defect, length up to ~8 sentences on technical posts, story-gating 'at least part of topic' + no-reuse, on-point pre-check, value/ROI-over-privacy topic lens, marketing-tech-AI no-go). Propagated: voice.md → v3.1 (§Comments-are-different rewritten); _retrieval-rules.yaml → v2.3 (stories+identity restored to comment profiles, gated via load_if_relevant); antipatterns.md → v1.1 (The Expertise Platform softened to 'The Ungated Credential'; added The Contrarian Opener + The Off-Point Comment); guardrails.md → v1.1 (Comment No-Go Topics added); daily-routine.md → v1.1 (cap + topic lens); stories.md → v1.1 (scope note updated — gated comment loading, not exclusion). Four decisions held provisional pending Markos's next round (see _analysis/voice-corrections-log.md): version 3.0 not '1.1'; daily cap 7–8 not 15; hashtags in Markos's own hand only; launch still gated (Stage 2)."
+  - "2.2 (2026-05-28): Added output_logs section — two running content logs (markos-linkedin-posts-log, markos-linkedin-articles-log) for chronological tracking of every short-form and long-form post under Markos's byline. Full body inline per entry. Not retrieval chunks; checked for past activity only. Wired into voice-of-markos README.md and CLAUDE.md."
   - "2.1 (2026-04-20): Added blog-craft.md (new chunk). Edit-craft gained Pass 0 preservation scan. Opinions and Stories each gained an activation scan at the top. Guardrails Red Zone gained reasoning-category tags and four new rules (vendor-dependency, paraphrased-as-quote, bio claim fact-check, named-vendor-in-failure). Voice gained WHY lines on never-preach, preach phrases, and final test. Derived from 2026-04-20 review-comparison cycle on Markos's enterprise-AI-governance blog."
   - "2.0 (2026-04-16): Consolidated from 19 chunks to 13. Identity, voice, opinions, stories, guardrails each merged into single files. Antipatterns moved from voice/ to craft/. Manifest, retrieval rules, CLAUDE.md, README.md rewritten."
   - "1.2 (2026-04-15): Added edit-craft.md. Added voice-antipatterns-markos.md."
@@ -63,8 +65,8 @@ chunks:
   comment-craft:
     path: "craft/comment-craft.md"
     domain: "craft"
-    summary: "Four kudos-first comment frameworks: Agree-and-Add, Share-Experience, Question-and-Extend, Another-Angle. Universal rules, escalation triggers."
-    token_count: 650
+    summary: "v3.0 (MVM-153). Four kudos-first comment frameworks: Agree-and-Add, Share-Experience, Question-and-Extend, Another-Angle. Lead-with-the-good/engage-the-content opening (contrarian opener banned); gated credential stories ('at least part of topic' + no-reuse); length up to ~8 on technical posts; on-point pre-check; value/ROI-over-privacy topic lens; marketing-tech-AI no-go; universal rules; escalation triggers."
+    token_count: 950
 
   newsjack-craft:
     path: "craft/newsjack-craft.md"
@@ -101,3 +103,15 @@ chunks:
     domain: "playbooks"
     summary: "Monday rhythm, three-tier comment approval, Slack flag comms, one-Linear-task-per-week cap, four-month trust progression."
     token_count: 650
+
+output_logs:
+  markos-linkedin-posts-log:
+    path: "markos-linkedin-posts-log.md"
+    domain: "logs"
+    summary: "Running log of every short-form LinkedIn post under Markos's personal profile. Prep date, scheduled date, status, tier, full body inline. Newest at top. Not loaded during writing tasks — checked for past activity."
+    type: "log"
+  markos-linkedin-articles-log:
+    path: "markos-linkedin-articles-log.md"
+    domain: "logs"
+    summary: "Running log of every long-form LinkedIn article under Markos's personal profile. Same structure as posts log plus editorial + SEO titles, reading time, pull-quote markers. Not loaded during writing tasks — checked for past activity."
+    type: "log"

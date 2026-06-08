@@ -1,4 +1,4 @@
-# Voice of Markos — Retrieval Rules v2.1
+# Voice of Markos — Retrieval Rules v2.3
 #
 # Task profiles for producing content and engagement from Markos's LinkedIn account
 # and personal blog. Parent rules still apply — banned words, confidence-over-fear,
@@ -18,15 +18,20 @@
 #   voice-antipatterns-markos, markos-about) replaced with new IDs matching
 #   consolidated files.
 
-version: "2.2"
-last_updated: "2026-05-13"
+version: "2.3"
+last_updated: "2026-06-08"
 
-# v2.2 (2026-05-13): markos_comment and markos_reply no longer load `stories`.
-#   Stories are post material — credentials and lived-experience anecdotes
-#   belong in long-form posts where Markos is the speaker, not in comments
-#   where the post author is the speaker. Driven by 20-comment audit
-#   (2026-05-12). See craft/comment-craft.md v2.1 and stories/stories.md
-#   top-section scope note.
+# v2.3 (2026-06-08, MVM-153): markos_comment and markos_reply load `stories`
+#   and `identity` again — but GATED, in load_if_relevant, not always_load.
+#   A credential story deploys only when the post topic is "at least part" of
+#   what the story answers, and is never reused in a short window. This reverses
+#   v2.2's blanket removal: Markos's own 20-post review (2026-06-04) found the
+#   real defect was the contrarian opener, not the credential — credentials are
+#   a gateable problem, not a pathway to delete. See craft/comment-craft.md v3.0
+#   and _analysis/2026-06-04_Comment-Feedback_Markos-Responses_and_Voice-Synthesis.md.
+#
+# v2.2 (2026-05-13, superseded): removed `stories` from comment profiles on the
+#   theory that credentials were the defect. Mis-diagnosis — see v2.3.
 
 task_profiles:
 
@@ -79,7 +84,7 @@ task_profiles:
     token_budget: 5000
 
   markos_comment:
-    description: "Substantive comment on another account's post. Stories NOT loaded — the post is the input, not Markos's history."
+    description: "Substantive comment on another account's post. Lead with the good, engage the actual + linked content, never open contrarian. Stories load GATED — only when the post topic is at least part of what the story answers."
     register: authority
     constraint_mode: standard
     always_load:
@@ -90,12 +95,17 @@ task_profiles:
       - "opinions"
       - "target-accounts"
       - "antipatterns"
-    # NOT loaded: stories, identity. Comments engage with the post, not the
-    # commenter's resume. See comment-craft.md v2.1.
-    token_budget: 3500
+      - "stories"
+      - "identity"
+    # stories + identity are GATED (load_if_relevant), not excluded. Deploy a
+    # credential only when the post topic is "at least part" of what the story
+    # answers, and never reuse the same credential in a short window. If a
+    # credential surfaces on an off-topic post, the gate failed — drop it.
+    # See comment-craft.md v3.0 § story-gating. (MVM-153, reverses v2.2.)
+    token_budget: 4500
 
   markos_reply:
-    description: "Reply to a comment on Markos's own post. Stories NOT loaded — reply to what the commenter said."
+    description: "Reply to a comment on Markos's own post. Reply to what the commenter said; lead with the good. Stories load GATED — only when the topic is at least part of what the story answers."
     register: authority
     constraint_mode: standard
     always_load:
@@ -105,8 +115,11 @@ task_profiles:
     load_if_relevant:
       - "opinions"
       - "antipatterns"
-    # NOT loaded: stories, identity.
-    token_budget: 3000
+      - "stories"
+      - "identity"
+    # stories + identity GATED (load_if_relevant), same rule as markos_comment.
+    # See comment-craft.md v3.0 § story-gating. (MVM-153, reverses v2.2.)
+    token_budget: 3500
 
   markos_brainstorm:
     description: "Brainstorm post angles and content directions"
