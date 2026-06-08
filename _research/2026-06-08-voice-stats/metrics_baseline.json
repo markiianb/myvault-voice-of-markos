@@ -1,0 +1,42 @@
+{
+  "label": "generic_ai_baseline",
+  "files": [
+    "30-Marketing/Thought-Leadership/linkedin-engagement/voice-of-markos/_research/2026-06-08-voice-stats/generic-baseline.md"
+  ],
+  "aggregate": {
+    "docs": 1,
+    "total_words": 432,
+    "sentence_len_mean": 14.4,
+    "sentence_len_sd": 6.07,
+    "pct_question_sentences": 3.33,
+    "pct_second_person_of_pronouns": 11.76,
+    "pct_first_person_of_pronouns": 29.41,
+    "em_dashes_per_1k": 13.89,
+    "en_dashes_per_1k": 0.0,
+    "colons_per_1k": 4.63,
+    "hedges_per_1k": 11.57,
+    "comparatives_per_1k": 6.94,
+    "specificity_per_1k": 30.09,
+    "numerals_per_1k": 0.0,
+    "mtld": 161.0
+  },
+  "per_doc": {
+    "30-Marketing/Thought-Leadership/linkedin-engagement/voice-of-markos/_research/2026-06-08-voice-stats/generic-baseline.md": {
+      "words": 432,
+      "sentences": 30,
+      "sentence_len_mean": 14.4,
+      "sentence_len_sd": 6.07,
+      "pct_question_sentences": 3.33,
+      "pct_second_person_of_pronouns": 11.76,
+      "pct_first_person_of_pronouns": 29.41,
+      "em_dashes_per_1k": 13.89,
+      "en_dashes_per_1k": 0.0,
+      "colons_per_1k": 4.63,
+      "hedges_per_1k": 11.57,
+      "comparatives_per_1k": 6.94,
+      "specificity_per_1k": 30.09,
+      "numerals_per_1k": 0.0,
+      "mtld": 161.0
+    }
+  }
+}

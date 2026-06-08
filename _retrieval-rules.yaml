@@ -18,9 +18,18 @@
 #   voice-antipatterns-markos, markos-about) replaced with new IDs matching
 #   consolidated files.
 
-version: "2.3"
+version: "2.4"
 last_updated: "2026-06-08"
 
+# v2.4 (2026-06-08, measurement-spine): registered the new `voice-stats` chunk
+#   (contrastive voice targets + em-dash target) as `load_if_relevant` on the
+#   editing/drafting profiles — markos_edit, markos_blog_edit, markos_anchor_post,
+#   markos_blog_post. It's the measurement companion: load it whenever a draft is
+#   being measured, edited, or run through /myvault:voice-eval. Kept in
+#   load_if_relevant (not always_load) because those profiles' always_load sets are
+#   already large; voice-stats (~750 tok) is consulted when checking, not on every
+#   draft. It is a QA instrument — never the voice source, never overrides pillars.
+#
 # v2.3 (2026-06-08, MVM-153): markos_comment and markos_reply load `stories`
 #   and `identity` again — but GATED, in load_if_relevant, not always_load.
 #   A credential story deploys only when the post topic is "at least part" of
@@ -49,6 +58,7 @@ task_profiles:
       - "audience-linkedin"
       - "opinions"
       - "stories"
+      - "voice-stats"
     parent_chunks_if_relevant:
       - "product-core"
       - "product-agents"
@@ -143,6 +153,8 @@ task_profiles:
       - "guardrails"
       - "opinions"
       - "stories"
+    load_if_relevant:
+      - "voice-stats"   # measurement companion — load when measuring/eval-gating an edit
     parent_chunks_if_relevant:
       - "constraints-messaging"
       - "constraints-style"
@@ -164,6 +176,7 @@ task_profiles:
       - "stories"
     load_if_relevant:
       - "audience-linkedin"
+      - "voice-stats"
     parent_chunks_if_relevant:
       - "product-core"
       - "product-agents"
@@ -181,6 +194,8 @@ task_profiles:
       - "opinions"
       - "stories"
       - "identity"
+    load_if_relevant:
+      - "voice-stats"   # measurement companion — load when measuring/eval-gating a blog edit
     parent_chunks_if_relevant:
       - "constraints-messaging"
       - "constraints-style"

@@ -1,11 +1,12 @@
 brand: "Voice of Markos"
 parent_brand: "MyVault"
-version: "2.3"
+version: "2.4"
 last_updated: "2026-06-08"
-total_chunks: 15
+total_chunks: 16
 voice_holder: "Markos Symeonides"
 steward: "Mark Bobyliak"
 changelog:
+  - "2.4 (2026-06-08, measurement-spine): Grafted the Spiral-derived measurement spine onto the satellite (QA instruments only — substance stays canonical). NEW chunk voice/voice-stats.md (v1.0): a contrastive voice vector computed from Markos's real verbatim speech + curated written renderings vs a generic-AI baseline (provenance/repro in _research/2026-06-08-voice-stats/). Load-bearing divergences: specificity 2.1×, numerals vs ~0 baseline, em-dashes 25/1k (1.8×), hedges 0.5×, high first-person (the Product-Voice inversion). Reconciled the em-dash contradiction: edit-craft.md → v1.1 and voice.md → v3.2 now defer to a per-voice em-dash TARGET (em-dash is on-voice for Markos), superseding the inherited parent ban. Added a VoM Voice-eval gate (edit-craft.md § Voice-eval gate): blind-lineup (human-ness, reuses the shared /myvault:voice-eval + blind-judge) + a non-blind VoM check (contrarian-opener, on-point, substitution). Wired as a soft gate into daily-routine.md → v1.2 and approval-workflow.md → v1.1 (the Stage-2 pre-launch round); judge→log→ratify flow documented in guide.md. First proof run logged (blend-in 0% on a system-drafted post — instrument discriminates) to _analysis/voice-corrections-log.md. Shared command corpus note refined to prefer verbatim-Markos decoys. NOT done (refused): auto-generated guides, stats overriding pillars/red lines, measuring system-draft logs as baseline. Launch stays gated."
   - "2.3 (2026-06-08, MVM-153): Comment-system reconciliation — integrated Markos's 20-post review (2026-06-04), reversing the v2.1 architecture. comment-craft.md → v3.0 (RESTORES the four kudos-first frameworks + gated credential stories that v2.1 removed; adds lead-with-the-good/engage-the-content opening with the contrarian opener banned as the #1 defect, length up to ~8 sentences on technical posts, story-gating 'at least part of topic' + no-reuse, on-point pre-check, value/ROI-over-privacy topic lens, marketing-tech-AI no-go). Propagated: voice.md → v3.1 (§Comments-are-different rewritten); _retrieval-rules.yaml → v2.3 (stories+identity restored to comment profiles, gated via load_if_relevant); antipatterns.md → v1.1 (The Expertise Platform softened to 'The Ungated Credential'; added The Contrarian Opener + The Off-Point Comment); guardrails.md → v1.1 (Comment No-Go Topics added); daily-routine.md → v1.1 (cap + topic lens); stories.md → v1.1 (scope note updated — gated comment loading, not exclusion). Four decisions held provisional pending Markos's next round (see _analysis/voice-corrections-log.md): version 3.0 not '1.1'; daily cap 7–8 not 15; hashtags in Markos's own hand only; launch still gated (Stage 2)."
   - "2.2 (2026-05-28): Added output_logs section — two running content logs (markos-linkedin-posts-log, markos-linkedin-articles-log) for chronological tracking of every short-form and long-form post under Markos's byline. Full body inline per entry. Not retrieval chunks; checked for past activity only. Wired into voice-of-markos README.md and CLAUDE.md."
   - "2.1 (2026-04-20): Added blog-craft.md (new chunk). Edit-craft gained Pass 0 preservation scan. Opinions and Stories each gained an activation scan at the top. Guardrails Red Zone gained reasoning-category tags and four new rules (vendor-dependency, paraphrased-as-quote, bio claim fact-check, named-vendor-in-failure). Voice gained WHY lines on never-preach, preach phrases, and final test. Derived from 2026-04-20 review-comparison cycle on Markos's enterprise-AI-governance blog."
@@ -19,6 +20,12 @@ chunks:
     domain: "voice"
     summary: "How Markos sounds. Tone, four voice qualities, three modes + never-preach, five failure portraits, banned words, rhythm, length rules, the Markos Final Test."
     token_count: 1200
+
+  voice-stats:
+    path: "voice/voice-stats.md"
+    domain: "voice"
+    summary: "v1.0 (measurement-spine). Contrastive voice vector for Markos — measurable targets (specificity, numerals, em-dash rate, hedges, first-person share, sentence SD, colons) vs a generic-AI baseline, computed from his verbatim speech + curated written renderings. Carries the per-voice em-dash target that supersedes the parent ban. A QA instrument, NOT the voice source; never overrides pillars/red lines. Provenance + repro in _research/2026-06-08-voice-stats/."
+    token_count: 750
 
   identity:
     path: "identity/identity.md"

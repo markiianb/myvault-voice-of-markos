@@ -1,6 +1,6 @@
 ---
 chunk_id: "voice"
-version: "3.1"
+version: "3.2"
 last_updated: "2026-06-08"
 status: "active"
 ---
@@ -95,7 +95,9 @@ If a draft reads like any of these, the voice has drifted. See `craft/antipatter
 
 ## Rhythm
 
-Mix long and short sentences. If every sentence is the same length, rewrite. Don't stack three short sentences in a row.
+Mix long and short sentences. If every sentence is the same length, rewrite. Don't stack three short sentences in a row. His asides, nested thoughts, and self-corrections render on the page as **em-dashes** — these are on-voice, not a tell. The blunt parent em-dash ban does not apply to Markos; his measured written cadence runs ~20–25 em-dashes/1k. See `voice/voice-stats.md`.
+
+**Measurable companion.** `voice/voice-stats.md` holds the contrastive voice vector — specificity, numerals, em-dash rate, hedge rate, first-person share, sentence-length SD — measured against a generic-AI baseline. It is a QA instrument for catching drift, never the voice source; the rules on this page and the pillars/stories/guardrails always govern.
 
 ---
 
