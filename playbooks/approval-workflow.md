@@ -13,9 +13,9 @@ depends_on:
   - "guardrails"
   - "comment-craft"
   - "target-accounts"
-token_count: ~650
-version: "1.0"
-last_updated: "2026-04-14"
+token_count: ~720
+version: "1.1"
+last_updated: "2026-06-08"
 status: "active"
 summary: >-
   How approvals actually run. Monday rhythm for posts, tiered comment approval, Slack flag comms, one-Linear-task-per-week cap, four-month trust progression.
@@ -112,6 +112,16 @@ At any point, Markos can pull oversight back to a higher level. If something doe
 - If a comment or post gets a negative reaction from Markos → delete/edit immediately, no defensiveness.
 - Log the learning in `_analysis/voice-corrections-log.md` (create if it doesn't exist).
 - Update `voice/voice.md` if it's a voice issue, `guardrails/guardrails.md` if a zone issue.
+
+## Voice-eval gate (Stage 2 — pre-launch)
+
+Markos's open ask before live commenting launches is *another feedback round on the updated voice*. The measurement spine makes that round higher-signal instead of cold.
+
+- **Before his pre-launch round:** run `/myvault:voice-eval --brand voice-of-markos` over the candidate batch (the v3.0 comment drafts + a few posts). It returns, per draft: a blind-lineup blend-in %, the non-blind VoM check (contrarian-opener / on-point / substitution), and voice-stats deltas. Surface the **flagged** drafts to Markos first — he reviews what the instrument doubts, not all of them from scratch.
+- **It is a screen, not a gate-keeper.** A low blend-in or a flagged opener routes a draft to a Markos-cadence edit or to Markos himself; it never auto-approves or auto-kills. The Tier system above still governs what publishes.
+- **Launch stays gated** regardless of scores — the eval informs the round; it does not end it. (See `_analysis/voice-corrections-log.md` for the gated-launch status and the four provisional MVM-153 points.)
+
+The judge→log→ratify flow (auto-surface, human-ratify, never auto-mutate) is documented in `guide.md` § How the eval feeds corrections and `craft/edit-craft.md` § Voice-eval gate.
 
 ## Open items (awaiting confirmation)
 

@@ -12,8 +12,8 @@ depends_on:
   - "comment-craft"
   - "target-accounts"
   - "guardrails"
-token_count: ~450
-version: "1.1"
+token_count: ~480
+version: "1.2"
 last_updated: "2026-06-08"
 status: "active"
 summary: >-
@@ -63,7 +63,10 @@ Every day, one last-10-comments review:
 - Do all 5–10 read like Markos?
 - Would he wince at any?
 - Any that drift toward preach / binary / generic?
+- **Contrarian-opener spot-check** — did any comment open by arguing against rather than engaging the good first? (The MVM-153 #1 defect; the fastest thing to catch by eye.)
 - If any drift → pull the comment, log the learning in `_analysis/voice-corrections-log.md`, update `voice/voice.md` if it's a pattern.
+
+Optional, on a near-final anchor post or a doubtful batch: run `/myvault:voice-eval --brand voice-of-markos` for a blend-in score + the non-blind VoM check (contrarian-opener, on-point, substitution) + voice-stats deltas. Soft signal — it surfaces candidates to `voice-corrections-log.md`; it never gates a comment on its own. See `craft/edit-craft.md` § Voice-eval gate.
 
 ## Engagement loop
 

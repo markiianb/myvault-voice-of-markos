@@ -1,6 +1,6 @@
 # Voice of Markos — Operator Guide
 
-The operational system for Markos Symeonides's LinkedIn presence and personal blog. Fifteen files across seven domain folders.
+The operational system for Markos Symeonides's LinkedIn presence and personal blog. Sixteen files across seven domain folders.
 
 ## What to load
 
@@ -14,7 +14,7 @@ The operational system for Markos Symeonides's LinkedIn presence and personal bl
 
 **Writing a blog post:** add `craft/blog-craft.md` + `craft/post-craft.md` (for anchor patterns) + `opinions/opinions.md` + `stories/stories.md`
 
-**Editing a LinkedIn draft:** add `craft/edit-craft.md` + `craft/antipatterns.md` (Pass 0 preservation scan, then Quick Scan, then Final Test)
+**Editing a LinkedIn draft:** add `craft/edit-craft.md` + `craft/antipatterns.md` (Pass 0 preservation scan, then Quick Scan, then Final Test). For a measured check, add `voice/voice-stats.md` and run the Voice-eval gate (`craft/edit-craft.md` § Voice-eval gate) — blind-lineup + contrarian-opener/on-point/substitution + voice-stats deltas. Soft signal; surfaces candidates to the corrections log, never auto-edits.
 
 **Editing a blog draft:** add `craft/edit-craft.md` + `craft/antipatterns.md` + `craft/blog-craft.md` (blog-specific failure patterns and pre-publish checklist apply)
 
@@ -35,11 +35,12 @@ Before Pass 1 of any edit, run these in order:
 
 Absent-but-on-topic pillars and stories are the highest-leverage rewrite opportunity. Flag before voice or copy issues.
 
-## The fifteen files
+## The sixteen files
 
 | Domain | File | What it covers |
 |---|---|---|
 | **voice/** | `voice.md` | How Markos sounds — tone, four qualities, three modes + never-preach, five failure portraits, banned words, rhythm, length, Final Test |
+| **voice/** | `voice-stats.md` | Measured, contrastive voice targets (specificity, numerals, em-dash rate, hedges, first-person, sentence SD) vs a generic-AI baseline. The per-voice em-dash target. A QA instrument, never the voice source. |
 | **identity/** | `identity.md` | Who Markos is — bio, positioning, authority claim, audience segments, disclosure rules |
 | **opinions/** | `opinions.md` | What he believes — activation scan, quick gate table, 8 pillars with thesis + sound-bites + red lines |
 | **stories/** | `stories.md` | 12 indexed stories with activation scan, Green/Yellow/Red status, pillar tags, cautions |

@@ -1,7 +1,7 @@
 # Voice of Markos System
 
-**Version:** 2.0
-**Last updated:** 2026-04-16
+**Version:** 2.4
+**Last updated:** 2026-06-08
 **Parent brand:** MyVault
 **Owner:** Mark Bobyliak (steward) · Markos Symeonides (voice holder)
 
@@ -19,11 +19,12 @@ It follows the same pattern as the Private by Design Newsletter: self-contained 
 - **Not a script.** Markos is a real person with real range. These chunks capture his positions, boundaries, and signature patterns — not a template he must robotically follow.
 - **Not a substitute for his judgement.** Everything he wouldn't sign off on stays off. When in doubt, escalate.
 
-## The 13 files
+## The 16 files
 
 | Domain | File | What it covers |
 |---|---|---|
 | **voice/** | `voice.md` | How Markos sounds — tone, four qualities, three modes + never-preach, five failure portraits, banned words, rhythm, Final Test |
+| **voice/** | `voice-stats.md` | Measured contrastive voice targets (specificity, numerals, em-dash rate, hedges, first-person, sentence SD) vs a generic-AI baseline + the per-voice em-dash target. QA instrument, not the voice source. |
 | **identity/** | `identity.md` | Who Markos is — bio, positioning, authority claim, audience segments, disclosure rules |
 | **opinions/** | `opinions.md` | Quick gate table + eight pillar deep-dives with thesis, sound-bites, story refs, red lines |
 | **stories/** | `stories.md` | 12 indexed personal stories with pillar tags, Green/Yellow/Red status, caution flags |

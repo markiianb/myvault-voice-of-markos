@@ -3,7 +3,7 @@ type: guide
 status: active
 owner: Mark Bobyliak
 created: 2026-04-16
-updated: 2026-04-16
+updated: 2026-06-08
 tags: [linkedin, voice-of-markos, guide, system]
 summary: How to use the Voice of Markos system — architecture, workflows, file map, correction loop.
 ---
@@ -16,7 +16,7 @@ How the system works, how the pieces connect, and the step-by-step workflow for 
 
 ## How the system is organized
 
-The system has **13 files** across **7 domain folders**, plus 4 orchestration files. Each file does one job.
+The system has **16 files** across **7 domain folders**, plus 4 orchestration files. Each file does one job.
 
 ```
 voice-of-markos/
@@ -30,6 +30,7 @@ voice-of-markos/
 │
 │  The voice (how Markos sounds)
 ├── voice/voice.md                ← tone, 4 qualities, 3 modes, failure portraits, banned words, Final Test
+├── voice/voice-stats.md          ← contrastive measured voice targets (QA instrument) + em-dash target
 │
 │  The person (who Markos is)
 ├── identity/identity.md          ← bio, positioning, authority, audience, disclosure rules
@@ -218,6 +219,16 @@ When Markos says "I wouldn't say it this way" or "yes, exactly":
 
 The system gets better with every correction. That's the point.
 
+### How the eval feeds corrections (the measurement spine)
+
+`/myvault:voice-eval --brand voice-of-markos` adds an *automated* feeder to the loop above — without changing who decides. The flow is **auto-surface, human-ratify, never auto-mutate**:
+
+1. The eval runs (blind-lineup blend-in % + the non-blind VoM check + voice-stats deltas — see `craft/edit-craft.md` § Voice-eval gate).
+2. Its deduped tells and gate flags append to `_analysis/voice-corrections-log.md` under a clearly-marked **`voice-eval candidates (unratified)`** block.
+3. A human reads the candidates and ratifies the real ones into chunk edits — exactly the 4-step flow above (log → identify file → update + version-bump → tell Sead). Unratified candidates are never applied automatically.
+
+So the machine *surfaces* what looks off; the human still *decides* what's canon. This is the deliberate difference from Spiral, which lets its judge auto-refine — our canon stays hand-ratified and version-controlled. The voice targets it scores against live in `voice/voice-stats.md` (a QA instrument, never the voice source).
+
 ---
 
 ## Who uses what
@@ -241,7 +252,7 @@ CEO-LinkedIn-Playbook.md               ← daily reference: quick-checks and rou
 voice-of-markos/                        ← source of truth: the full voice system
 ├── CLAUDE.md                           ← AI routing: what to load per task
 ├── guide.md                            ← this file: how to use the system
-└── [13 content files]                  ← the actual voice, positions, stories, craft, guardrails
+└── [16 content files]                  ← the actual voice, positions, stories, craft, guardrails
 ```
 
 The Framework explains the program. The Playbook runs the daily work. The system files hold the truth. This guide explains how they connect.
