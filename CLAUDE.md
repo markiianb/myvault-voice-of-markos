@@ -14,7 +14,7 @@ The operational system for Markos Symeonides's LinkedIn presence and personal bl
 
 **Writing a blog post:** add `craft/blog-craft.md` + `craft/post-craft.md` (for anchor patterns) + `opinions/opinions.md` + `stories/stories.md`
 
-**Editing a LinkedIn draft:** add `craft/edit-craft.md` + `craft/antipatterns.md` (Pass 0 preservation scan, then Quick Scan, then Final Test). For a measured check, add `voice/voice-stats.md` and run the Voice-eval gate (`craft/edit-craft.md` § Voice-eval gate) — blind-lineup + contrarian-opener/on-point/substitution + voice-stats deltas. Soft signal; surfaces candidates to the corrections log, never auto-edits.
+**Editing a LinkedIn draft:** add `craft/edit-craft.md` + `craft/antipatterns.md` (Pass 0 preservation scan, then Quick Scan, then Final Test). The one originality check that matters: **"could only Markos have written this?"** (`craft/antipatterns.md` § The Substitution Test) — a fail means deploy a pillar/story/specific, not polish. No numeric scoring step (`voice/voice-stats.md` is parked).
 
 **Editing a blog draft:** add `craft/edit-craft.md` + `craft/antipatterns.md` + `craft/blog-craft.md` (blog-specific failure patterns and pre-publish checklist apply)
 
@@ -24,7 +24,7 @@ The operational system for Markos Symeonides's LinkedIn presence and personal bl
 
 **Checking approval / cadence / accounts:** `playbooks/approval-workflow.md` + `playbooks/daily-routine.md` + `playbooks/target-accounts.md`
 
-**Checking what's been posted recently:** `markos-linkedin-posts-log.md` for short-form (anchor / newsjack / build-note) + `markos-linkedin-articles-log.md` for long-form. Newest at top. Both now carry a `provenance` tag (markos-verbatim | markos-edited | system-draft) + pillar/mode/story/engagement tags. **`markos-edits-log.md`** holds every `(system-draft → Markos-final)` edit pair — the ground-truth voice data (Loop 1). These are records, not retrieval chunks — load when triaging past activity or re-grounding voice-stats, not when drafting.
+**Checking what's been posted recently:** `markos-linkedin-posts-log.md` for short-form (anchor / newsjack / build-note) + `markos-linkedin-articles-log.md` for long-form. Newest at top; both carry a `provenance` tag (markos-verbatim | markos-edited | system-draft). **`markos-edits-log.md`** holds every `(system-draft → Markos-final)` edit pair — the ground-truth voice data, and the one habit that matters: capture Markos's edits. These are records, not retrieval chunks — not loaded when drafting.
 
 ## Two scans run before every review
 
@@ -40,7 +40,7 @@ Absent-but-on-topic pillars and stories are the highest-leverage rewrite opportu
 | Domain | File | What it covers |
 |---|---|---|
 | **voice/** | `voice.md` | How Markos sounds — tone, four qualities, three modes + never-preach, five failure portraits, banned words, rhythm, length, Final Test |
-| **voice/** | `voice-stats.md` | Measured, contrastive voice targets (specificity, numerals, em-dash rate, hedges, first-person, sentence SD) vs a generic-AI baseline. The per-voice em-dash target. A QA instrument, never the voice source. |
+| **voice/** | `voice-stats.md` | PARKED stub — no numeric voice targets yet (no real Markos posts to derive them from). Judge voice qualitatively; the meter stays dormant on disk. |
 | **identity/** | `identity.md` | Who Markos is — bio, positioning, authority claim, audience segments, disclosure rules |
 | **opinions/** | `opinions.md` | What he believes — activation scan, quick gate table, 8 pillars with thesis + sound-bites + red lines |
 | **stories/** | `stories.md` | 12 indexed stories with activation scan, Green/Yellow/Red status, pillar tags, cautions |

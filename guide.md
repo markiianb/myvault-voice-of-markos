@@ -30,7 +30,7 @@ voice-of-markos/
 │
 │  The voice (how Markos sounds)
 ├── voice/voice.md                ← tone, 4 qualities, 3 modes, failure portraits, banned words, Final Test
-├── voice/voice-stats.md          ← contrastive measured voice targets (QA instrument) + em-dash target
+├── voice/voice-stats.md          ← PARKED stub (no numeric targets yet — judge qualitatively)
 │
 │  The person (who Markos is)
 ├── identity/identity.md          ← bio, positioning, authority, audience, disclosure rules
@@ -219,19 +219,11 @@ When Markos says "I wouldn't say it this way" or "yes, exactly":
 
 The system gets better with every correction. That's the point.
 
-### How the eval feeds corrections (the measurement spine)
+### The keystone: capture Markos's edits
 
-`/myvault:voice-eval --brand voice-of-markos` adds an *automated* feeder to the loop above — without changing who decides. The flow is **auto-surface, human-ratify, never auto-mutate**:
+The single most valuable input is Markos's own edits. Every time he rewrites a draft, capture the `(draft → final)` pair in [[markos-edits-log]] — the only real data the program generates on how he actually writes. The voice system today rests on one April voice session plus curated renderings, with **zero validation against a real published post**; those edit-pairs are how it earns real ground over time. When enough accumulate, derive any measurement from *them*.
 
-1. The eval runs **originality-first** (v2.5): the substitution / pillar-activation check is PRIMARY, the blind-lineup blend-in is secondary/advisory, voice-stats deltas tertiary — see `craft/edit-craft.md` § Voice-eval gate. It is now a *required* step before Markos's pre-launch round, with a trend block (substitution-pass % over batches) in `playbooks/approval-workflow.md`.
-2. Its deduped tells and gate flags append to `_analysis/voice-corrections-log.md` under a clearly-marked **`voice-eval candidates (unratified)`** block.
-3. A human reads the candidates and ratifies the real ones into chunk edits — exactly the 4-step flow above (log → identify file → update + version-bump → tell Sead). Unratified candidates are never applied automatically.
-
-The round-over-round version of this — how we *improve the system*, not just gate one draft — is `playbooks/improvement-loop.md` (the discrimination test + the loop procedure + the honesty limits). Its first run is logged at `_research/2026-06-09-improvement-loop/run-1.md`.
-
-**The keystone feeder is Loop 1 (`markos-edits-log.md`):** every time Markos edits a draft, the `(draft → final)` pair is captured. Those pairs are the only real written-Markos data the program generates — once they accumulate they re-ground `voice/voice-stats.md` (replacing today's directional prior with real, per-mode numbers) and seed the recognition lineup. The whole spine was built with **zero ground truth**; this is how it earns some.
-
-So the machine *surfaces* what looks off; the human still *decides* what's canon. This is the deliberate difference from Spiral, which lets its judge auto-refine — our canon stays hand-ratified and version-controlled. The voice targets it scores against live in `voice/voice-stats.md` — a QA instrument and a **directional prior**, never the voice source.
+Until then, judge **qualitatively** — there are no numeric voice targets (`voice/voice-stats.md` is parked) and no routine scoring step. The bar is the Final Test plus the substitution question ("could only Markos have written this?", `craft/antipatterns.md`). A measurement instrument exists on disk (`scripts/voice-stats/voice_stats.py`) and a blind-lineup eval (`/myvault:voice-eval`) — both **dormant**, to be used only when real data justifies them, never as a daily ritual.
 
 ---
 

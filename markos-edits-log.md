@@ -18,11 +18,11 @@ The keystone of the feedback system. Every time Markos rewrites a draft, the **d
 the system produced and what he actually published is labeled voice data** — for free. He rewrote
 13 of 20 drafts in the MVM-153 comment review; that signal used to be thrown away. This log keeps it.
 
-**Why it matters.** The voice chunks and `voice/voice-stats.md` were built from one April voice
-session + curated renderings — *zero* validation against real published Markos writing (the 2026-06-08
-audit's root finding). These pairs are the only real written-Markos data the program generates. Once
-~10+ accumulate, they **re-ground** voice-stats (real numbers, per-mode), give the blind-lineup an
-honest decoy corpus, and supply the recognition-lineup (see `voice/voice-stats.md` § hooks).
+**Why it matters.** The voice chunks were built from one April voice session + curated renderings —
+*zero* validation against real published Markos writing (the 2026-06-08 audit's root finding). These
+pairs are the only real written-Markos data the program generates. Once enough accumulate, they're
+what any future measurement should be derived from — real numbers from real posts, not guesses. Until
+then there are no numeric voice targets (`voice/voice-stats.md` is parked); judge qualitatively.
 
 > [!warning] Not a retrieval chunk; not an exemplar to imitate
 > This is a **record**, like the posts/articles logs. It is NOT loaded during drafting and is NOT in
@@ -66,11 +66,10 @@ chunk: e.g. "→ opinions/opinions.md pillar 7" or "→ candidate for voice.md".
 1. **Ratify recurring lessons** — when the same edit-pattern shows up across ≥2–3 pairs, it's a real
    correction: log it in `_analysis/voice-corrections-log.md` and ratify into the relevant chunk
    (version-bump). One-offs stay here as data, not canon.
-2. **Re-ground voice-stats** — once enough `after` (Markos-final) text accumulates, run
-   `scripts/voice-stats/voice_stats.py` over it to replace the directional prior in
-   `voice/voice-stats.md` with real, per-mode numbers. (Until then voice-stats stays a prior.)
-3. **Feed the recognition lineup** — the `after` corpus becomes the real-Markos decoy set for the
-   recognition-lineup eval variant (activates at ≥10 `markos-verbatim`/`markos-edited` posts).
+2. **Derive measurement later — only when it's justified.** Once a real body of `after`
+   (Markos-final) text accumulates, voice numbers *could* be derived from it; the dormant meter
+   (`scripts/voice-stats/voice_stats.py`) is there for that day. Not before — don't compute targets
+   from a handful of pairs. A deliberate human decision, never an automatic step.
 
 ## Entries
 

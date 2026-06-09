@@ -1,6 +1,6 @@
 ---
 chunk_id: "voice"
-version: "3.3"
+version: "3.4"
 last_updated: "2026-06-09"
 status: "active"
 ---
@@ -95,9 +95,9 @@ If a draft reads like any of these, the voice has drifted. See `craft/antipatter
 
 ## Rhythm
 
-Mix long and short sentences. If every sentence is the same length, rewrite. Don't stack three short sentences in a row. His asides, nested thoughts, and self-corrections render on the page as **em-dashes** — these are on-voice, not a tell. The blunt parent em-dash ban does not apply to Markos; this is relaxed **on principle** (his cadence is aside-driven), not on a measured number. See `voice/voice-stats.md`.
+Mix long and short sentences. If every sentence is the same length, rewrite. Don't stack three short sentences in a row. His asides, nested thoughts, and self-corrections render on the page as **em-dashes** — these are on-voice, not a tell. The blunt parent em-dash ban does not apply to Markos; this is a judgment call on principle (his cadence is aside-driven), not a measured number.
 
-**Measurable companion.** `voice/voice-stats.md` holds directional voice targets — specificity, numerals, hedge rate, first-person share, sentence-length SD. It is a QA instrument for catching drift and a **directional prior, not derived truth**; the rules on this page and the pillars/stories/guardrails always govern.
+**On measurement.** There are no numeric voice targets — judge voice **qualitatively**: this page, the Final Test, and `craft/antipatterns.md` § The Substitution Test ("could only Markos have written this?"). `voice/voice-stats.md` is parked — we have no real published Markos posts to derive trustworthy numbers from yet. The pillars, stories, and guardrails always govern.
 
 ---
 

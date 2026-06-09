@@ -37,8 +37,6 @@ Paste a new block at the very top of the **Entries** section, above the most rec
 - **Cover image:** (Figma node / asset path, or "none")
 - **URL:** (paste LinkedIn URL once live)
 - **Provenance:** markos-verbatim | markos-edited | system-draft  <!-- tag every entry; if markos-edited, log the (draft→final) pair in markos-edits-log.md -->
-- **Tags:** pillar=<1–8 from opinions/opinions.md> · mode=article · story=<id from stories/stories.md, or none>
-- **Engagement:** (backfill after ~1wk: impressions / comments / reciprocity)  <!-- Loop 2: manual for now, no analytics pipeline -->
 
 <!-- Full article body, verbatim, including subheads and pull quotes -->
 
