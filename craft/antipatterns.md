@@ -1,7 +1,7 @@
 ---
 chunk_id: "antipatterns"
-version: "1.1"
-last_updated: "2026-06-08"
+version: "1.2"
+last_updated: "2026-06-09"
 status: "active"
 ---
 
@@ -161,6 +161,20 @@ Before anything goes near his account:
 4. **Does it sound like thinking, or like a performance?** A reader who knew him should recognise the voice. A reader who doesn't should feel they've met a practitioner, not an agency.
 
 If any line fails, rewrite that line -- not the whole piece.
+
+---
+
+## The Substitution Test (the originality gate — canonical definition)
+
+The single most important check, and the one a generic AI can't pass for you. Ask:
+
+> **Could any competent AI/privacy founder have published this verbatim — or only Markos?**
+
+A **pass** deploys at least one of: a **pillar thesis** (`opinions/opinions.md`), a **story/anchor** (`stories/stories.md`), or a **named specific** only he'd reach for (Bedrock, Qwen, the knowledge graph, the 15:1 services ratio, the $100k GCP bill, 25 years across named industries). A **fail** is competent, on-voice, and *interchangeable* — it would read the same under anyone's name. On a fail, route to an opinion/story **activation pass** before anything else; that's a bigger miss than any word-level tell.
+
+**Why this is the primary gate, not a nice-to-have.** Human-likeness is table stakes — any decent model clears a blind lineup. Saying something *only Markos would say* is the moat, and it's the one thing a competitor's voice engine structurally cannot manufacture (it has no opinions or lived stories to deploy). When a draft passes the read-aloud test but fails substitution, it's the dangerous case: it *sounds* like him and says nothing of his.
+
+This definition is canonical here; `craft/edit-craft.md` § Voice-eval gate and `voice/voice-stats.md` point to it rather than restating it.
 
 ---
 

@@ -3,7 +3,7 @@ type: guide
 status: active
 owner: Mark Bobyliak
 created: 2026-04-16
-updated: 2026-06-08
+updated: 2026-06-09
 tags: [linkedin, voice-of-markos, guide, system]
 summary: How to use the Voice of Markos system — architecture, workflows, file map, correction loop.
 ---
@@ -223,11 +223,13 @@ The system gets better with every correction. That's the point.
 
 `/myvault:voice-eval --brand voice-of-markos` adds an *automated* feeder to the loop above — without changing who decides. The flow is **auto-surface, human-ratify, never auto-mutate**:
 
-1. The eval runs (blind-lineup blend-in % + the non-blind VoM check + voice-stats deltas — see `craft/edit-craft.md` § Voice-eval gate).
+1. The eval runs **originality-first** (v2.5): the substitution / pillar-activation check is PRIMARY, the blind-lineup blend-in is secondary/advisory, voice-stats deltas tertiary — see `craft/edit-craft.md` § Voice-eval gate. It is now a *required* step before Markos's pre-launch round, with a trend block (substitution-pass % over batches) in `playbooks/approval-workflow.md`.
 2. Its deduped tells and gate flags append to `_analysis/voice-corrections-log.md` under a clearly-marked **`voice-eval candidates (unratified)`** block.
 3. A human reads the candidates and ratifies the real ones into chunk edits — exactly the 4-step flow above (log → identify file → update + version-bump → tell Sead). Unratified candidates are never applied automatically.
 
-So the machine *surfaces* what looks off; the human still *decides* what's canon. This is the deliberate difference from Spiral, which lets its judge auto-refine — our canon stays hand-ratified and version-controlled. The voice targets it scores against live in `voice/voice-stats.md` (a QA instrument, never the voice source).
+**The keystone feeder is Loop 1 (`markos-edits-log.md`):** every time Markos edits a draft, the `(draft → final)` pair is captured. Those pairs are the only real written-Markos data the program generates — once they accumulate they re-ground `voice/voice-stats.md` (replacing today's directional prior with real, per-mode numbers) and seed the recognition lineup. The whole spine was built with **zero ground truth**; this is how it earns some.
+
+So the machine *surfaces* what looks off; the human still *decides* what's canon. This is the deliberate difference from Spiral, which lets its judge auto-refine — our canon stays hand-ratified and version-controlled. The voice targets it scores against live in `voice/voice-stats.md` — a QA instrument and a **directional prior**, never the voice source.
 
 ---
 
