@@ -13,8 +13,8 @@ depends_on:
   - "guardrails"
   - "comment-craft"
   - "target-accounts"
-token_count: ~820
-version: "1.2"
+token_count: ~840
+version: "1.3"
 last_updated: "2026-06-09"
 status: "active"
 summary: >-
@@ -135,7 +135,7 @@ Append one line per batch. The headline metric is **substitution-pass %** (the p
 ```
 | date | n drafts | substitution-pass % | median blend-in % | top recurring tell |
 |------|----------|---------------------|-------------------|--------------------|
-|      |          |                     |                   |                    |
+| 2026-06-09 | improvement-loop run-1 (1 seed / 3 rounds) | 100% (originality cleared by R1, held) | 0% (blind-judge caught the draft every round) | leaked generator meta-reasoning (R1–2) → written-register smoothness / aphoristic closers (R3) |
 ```
 
 The judge→log→ratify flow (auto-surface, human-ratify, never auto-mutate) is documented in `guide.md` § How the eval feeds corrections and `craft/edit-craft.md` § Voice-eval gate. Markos's own edits from the round feed [[markos-edits-log]] (Loop 1).
