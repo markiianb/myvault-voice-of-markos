@@ -1,12 +1,12 @@
 brand: "Voice of Markos"
 parent_brand: "MyVault"
-version: "2.7"
+version: "2.8"
 last_updated: "2026-06-09"
-total_chunks: 16
+total_chunks: 18
 voice_holder: "Markos Symeonides"
 steward: "Mark Bobyliak"
 changelog:
-  - "2.7 (2026-06-09, SIMPLIFICATION — deliberate cut of over-built instrumentation): The measurement work (v2.4-2.6) ran in a vacuum — ZERO real Markos data, so its numbers were guesses and its loops graded the system against itself. Stripped back to curated substance + two cheap habits. CUT: playbooks/improvement-loop.md (deleted — the loop is a tool Claude runs on request, not a standing chore); the voice-stats numeric target vector + per-mode slots + recognition-lineup + style-distance hooks (voice-stats.md → v2.0 'parked' stub explaining why there are no numbers yet, so nobody re-adds invented ones; not loaded by any profile); the routine voice-eval gate (edit-craft.md → v1.3 replaces the 3-axis gate with ONE qualitative question — 'could only Markos have written this?'); the eval-required precondition + trend block (approval-workflow.md → v1.4 simple pre-launch round); the optional-eval line (daily-routine.md → v1.4); the pillar/mode/story/engagement post-tags (logs keep only the cheap provenance tag). KEPT: all 15 curated voice chunks (the moat, untouched); markos-edits-log (the keystone); provenance tag; the substitution test as canon in antipatterns.md; the v2.4-2.6 honesty corrections. DORMANT on disk (installed, un-wired): scripts/voice-stats/voice_stats.py + /myvault:voice-eval — tools for when real data exists, not rituals. _research/ kept as archive. WHY (don't re-build): precision instruments on absent data are noise; the real unlock is Loop 1 (real edits), not more apparatus. Launch stays gated."
+  - "2.8 (2026-06-09, restore-with-constitution): Reverted the v2.7 simplification and restored the measurement spine to its v2.6 honest form (voice-stats directional-prior vector, the /myvault:voice-eval gate, playbooks/improvement-loop.md, the trend block, the log tags) — per Mark's call to keep the capability, not park it. The spine that came back is the HONEST one: the v2.5 fixes (no strawman ×-multipliers, em-dash demoted, originality the PRIMARY gate, substitution test canonical) are intact; we did NOT resurrect the naive v2.4 numbers. NEW: PRINCIPLES.md (v1.0) — the constitution layer the system never had. It states the Spiral learnings as governing principles (curated substance not averaged samples; originality is the moat; measure only against real ground truth; capture real edits; the loop never auto-mutates; keep instruments ready-but-honest). This is what makes the restore sound rather than a relapse: the spine is wired AND governed — its numbers are explicitly a directional prior until Markos's real edits (markos-edits-log, Loop 1) make them trustworthy. The standing test before adding machinery: does it have real ground truth? If not, park don't build. Launch stays gated. (v2.7, 2026-06-09, was the brief simplification that cut the spine; reversed here — the lesson it carried is now preserved as PRINCIPLES.md rather than as a deletion.)"
   - "2.6 (2026-06-09, evaluation + improvement loop): Specified and RAN the round-over-round improvement loop (the backlog item v2.4/v2.5 left as single-pass-only). NEW chunk playbooks/improvement-loop.md (v1.0): the discrimination test + the loop procedure + the hard honesty limits (no real Markos in the loop) + never-optimize-blend-in + never-auto-mutate. First real run (_research/2026-06-09-improvement-loop/run-1.md, workflow wf_b784c01c-bdd) on the frontier-model post: discrimination test ranked gold > system-draft > anti correctly; originality converged by R1 and held, but the blind-lineup caught the draft at high confidence ALL 3 rounds (R1-2 a leaked generator meta-reasoning preamble; R3 written-register smoothness) and voice-stats did not converge — an honest 'mechanism works, not validated' result. Surfaced 5 system-fix candidates to _analysis/voice-corrections-log.md, ALL UNRATIFIED (none applied; most are generator-wiring, not chunk edits). approval-workflow → v1.3 (trend row added). NOT done (held to discipline): no canon auto-mutated, nothing ratified on one synthetic run, no claim the loop validates against real Markos. The real next step is Loop 1 data, not another loop run. Launch stays gated."
   - "2.5 (2026-06-09, ground-truth loops): First-principles improvement per the 2026-06-08 adversarial audit — the system had ZERO ground truth (built from one voice session + self-authored renderings). Closes the missing feedback loops + fixes calibration honesty; process-first, deferring precision instruments that need data we don't have. (A) Honesty: voice-stats → v1.1 strikes the ×generic-AI multiplier column (self-authored strawman) and relabels rates as a DIRECTIONAL PRIOR; the em-dash target is demoted to a qualitative on-principle rule (the 25/1k number was circular — from our own after-examples). voice → v3.3, edit-craft → v1.2 mirror it; generic-baseline marked a retired strawman. (B) Loop 1 (keystone): NEW markos-edits-log.md captures every (system-draft → Markos-final) pair (the highest-signal voice data, previously discarded); provenance field added to both logs. (C) Loop 3: the eval now MUST run — a required ticked precondition of Markos's pre-launch round (advisory verdict), with a trend block (substitution-pass % primary). (D) Substitution test → PRIMARY gate (canonical def in antipatterns → v1.2); blind-lineup demoted to secondary. (E) Scaffolding behind hooks: per-post pillar/mode/story/engagement tags; per-mode voice-stats slots (pending real data); recognition-lineup (≥10 real posts) + style-distance (deferred) documented, NOT built. daily-routine → v1.3, approval-workflow → v1.2. NOT done (refused — the audit's flagged failure mode): style-embedding pipeline, engagement analytics, fabricated per-mode numbers. Launch stays gated."
   - "2.4 (2026-06-08, measurement-spine): Grafted the Spiral-derived measurement spine onto the satellite (QA instruments only — substance stays canonical). NEW chunk voice/voice-stats.md (v1.0): a contrastive voice vector computed from Markos's real verbatim speech + curated written renderings vs a generic-AI baseline (provenance/repro in _research/2026-06-08-voice-stats/). Load-bearing divergences: specificity 2.1×, numerals vs ~0 baseline, em-dashes 25/1k (1.8×), hedges 0.5×, high first-person (the Product-Voice inversion). Reconciled the em-dash contradiction: edit-craft.md → v1.1 and voice.md → v3.2 now defer to a per-voice em-dash TARGET (em-dash is on-voice for Markos), superseding the inherited parent ban. Added a VoM Voice-eval gate (edit-craft.md § Voice-eval gate): blind-lineup (human-ness, reuses the shared /myvault:voice-eval + blind-judge) + a non-blind VoM check (contrarian-opener, on-point, substitution). Wired as a soft gate into daily-routine.md → v1.2 and approval-workflow.md → v1.1 (the Stage-2 pre-launch round); judge→log→ratify flow documented in guide.md. First proof run logged (blend-in 0% on a system-drafted post — instrument discriminates) to _analysis/voice-corrections-log.md. Shared command corpus note refined to prefer verbatim-Markos decoys. NOT done (refused): auto-generated guides, stats overriding pillars/red lines, measuring system-draft logs as baseline. Launch stays gated."
@@ -18,6 +18,12 @@ changelog:
   - "1.0 (2026-04-14): Initial 17 chunks built from Apr 10 voice session."
 
 chunks:
+  principles:
+    path: "PRINCIPLES.md"
+    domain: "constitution"
+    summary: "v1.0 (2026-06-09). The constitution — WHY the system is shaped this way + what it refuses. Six governing principles (curated-not-averaged; originality is the moat; measure only against real ground truth; capture real edits; the loop never auto-mutates; keep instruments ready-but-honest) + the Spiral learnings that produced them. Read before changing the system. Not loaded during routine drafting."
+    token_count: 700
+
   voice:
     path: "voice/voice.md"
     domain: "voice"
@@ -27,8 +33,8 @@ chunks:
   voice-stats:
     path: "voice/voice-stats.md"
     domain: "voice"
-    summary: "v2.0 PARKED stub. No numeric voice targets yet — we have no real published Markos posts to derive trustworthy ones from. Explains the parking so nobody re-adds invented numbers. Not loaded by any task profile. Judge voice qualitatively (voice.md Final Test + antipatterns.md substitution test). The meter (scripts/voice-stats/voice_stats.py) stays dormant until markos-edits-log accrues real data."
-    token_count: 150
+    summary: "v1.0 (measurement-spine). Contrastive voice vector for Markos — measurable targets (specificity, numerals, em-dash rate, hedges, first-person share, sentence SD, colons) vs a generic-AI baseline, computed from his verbatim speech + curated written renderings. Carries the per-voice em-dash target that supersedes the parent ban. A QA instrument, NOT the voice source; never overrides pillars/red lines. Provenance + repro in _research/2026-06-08-voice-stats/."
+    token_count: 750
 
   identity:
     path: "identity/identity.md"
@@ -111,8 +117,14 @@ chunks:
   approval-workflow:
     path: "playbooks/approval-workflow.md"
     domain: "playbooks"
-    summary: "Monday rhythm, three-tier comment approval, Slack flag comms, one-Linear-task-per-week cap, four-month trust progression, the edit-capture step, and a simple pre-launch round (launch stays gated)."
+    summary: "Monday rhythm, three-tier comment approval, Slack flag comms, one-Linear-task-per-week cap, four-month trust progression. v1.3: required Stage-2 voice-eval precondition + eval trend block."
     token_count: 820
+
+  improvement-loop:
+    path: "playbooks/improvement-loop.md"
+    domain: "playbooks"
+    summary: "v1.0 (2026-06-09). How we evaluate + improve the system: the discrimination test (does the eval rank known-quality drafts?) + the round-over-round loop (draft → measure originality-PRIMARY/blind/voice-stats → diagnose draft-vs-system → revise + surface candidates → re-measure). A process record, NOT loaded during drafting. Carries the hard honesty limit (no real Markos in the loop) + never-optimize-blend-in + never-auto-mutate. First run: _research/2026-06-09-improvement-loop/run-1.md."
+    token_count: 750
 
 output_logs:
   markos-linkedin-posts-log:

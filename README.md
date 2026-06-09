@@ -1,7 +1,7 @@
 # Voice of Markos System
 
-**Version:** 2.7
-**Last updated:** 2026-06-09
+**Version:** 2.4
+**Last updated:** 2026-06-08
 **Parent brand:** MyVault
 **Owner:** Mark Bobyliak (steward) · Markos Symeonides (voice holder)
 
@@ -24,7 +24,7 @@ It follows the same pattern as the Private by Design Newsletter: self-contained 
 | Domain | File | What it covers |
 |---|---|---|
 | **voice/** | `voice.md` | How Markos sounds — tone, four qualities, three modes + never-preach, five failure portraits, banned words, rhythm, Final Test |
-| **voice/** | `voice-stats.md` | PARKED stub — no numeric voice targets yet (no real Markos posts to derive them from). Judge voice qualitatively; the meter stays dormant. |
+| **voice/** | `voice-stats.md` | Measured contrastive voice targets (specificity, numerals, em-dash rate, hedges, first-person, sentence SD) vs a generic-AI baseline + the per-voice em-dash target. QA instrument, not the voice source. |
 | **identity/** | `identity.md` | Who Markos is — bio, positioning, authority claim, audience segments, disclosure rules |
 | **opinions/** | `opinions.md` | Quick gate table + eight pillar deep-dives with thesis, sound-bites, story refs, red lines |
 | **stories/** | `stories.md` | 12 indexed personal stories with pillar tags, Green/Yellow/Red status, caution flags |
@@ -41,11 +41,11 @@ It follows the same pattern as the Private by Design Newsletter: self-contained 
 
 ## Output logs
 
-Running logs hold every piece of Markos-bylined content:
+Two running logs hold every piece of Markos-bylined content:
 
-- `markos-linkedin-posts-log.md` — short-form LinkedIn posts (anchor / newsjack / build-note). Prep + scheduled dates, full body inline, newest at top. Carries a `provenance` tag.
+- `markos-linkedin-posts-log.md` — short-form LinkedIn posts (anchor / newsjack / build-note). Prep + scheduled dates, full body inline, newest at top. Carries `provenance` + pillar/mode/story/engagement tags (v2.5).
 - `markos-linkedin-articles-log.md` — long-form LinkedIn articles. Same structure plus editorial + SEO titles, reading time, pull-quote markers.
-- `markos-edits-log.md` — **the keystone:** every `(system-draft → Markos-final)` edit pair. The highest-signal voice data the program produces — the one habit worth keeping. Read periodically to ratify recurring corrections; never loaded during drafting.
+- `markos-edits-log.md` — **(v2.5, ground truth)** every `(system-draft → Markos-final)` edit pair. The highest-signal voice data the program produces (Loop 1) — read periodically to re-ground voice-stats and ratify corrections; never loaded during drafting.
 
 These are records, not retrieval chunks. Load them when answering "what has Markos posted lately?" — not when drafting a new post. The chunks to load for drafting are in the table above.
 
