@@ -227,6 +227,8 @@ The system gets better with every correction. That's the point.
 2. Its deduped tells and gate flags append to `_analysis/voice-corrections-log.md` under a clearly-marked **`voice-eval candidates (unratified)`** block.
 3. A human reads the candidates and ratifies the real ones into chunk edits — exactly the 4-step flow above (log → identify file → update + version-bump → tell Sead). Unratified candidates are never applied automatically.
 
+The round-over-round version of this — how we *improve the system*, not just gate one draft — is `playbooks/improvement-loop.md` (the discrimination test + the loop procedure + the honesty limits). Its first run is logged at `_research/2026-06-09-improvement-loop/run-1.md`.
+
 **The keystone feeder is Loop 1 (`markos-edits-log.md`):** every time Markos edits a draft, the `(draft → final)` pair is captured. Those pairs are the only real written-Markos data the program generates — once they accumulate they re-ground `voice/voice-stats.md` (replacing today's directional prior with real, per-mode numbers) and seed the recognition lineup. The whole spine was built with **zero ground truth**; this is how it earns some.
 
 So the machine *surfaces* what looks off; the human still *decides* what's canon. This is the deliberate difference from Spiral, which lets its judge auto-refine — our canon stays hand-ratified and version-controlled. The voice targets it scores against live in `voice/voice-stats.md` — a QA instrument and a **directional prior**, never the voice source.
