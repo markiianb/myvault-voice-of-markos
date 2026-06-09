@@ -1,6 +1,6 @@
 ---
 chunk_id: "antipatterns"
-version: "1.3"
+version: "1.2"
 last_updated: "2026-06-09"
 status: "active"
 ---
@@ -174,7 +174,7 @@ A **pass** deploys at least one of: a **pillar thesis** (`opinions/opinions.md`)
 
 **Why this is the primary gate, not a nice-to-have.** Human-likeness is table stakes — any decent model clears a blind lineup. Saying something *only Markos would say* is the moat, and it's the one thing a competitor's voice engine structurally cannot manufacture (it has no opinions or lived stories to deploy). When a draft passes the read-aloud test but fails substitution, it's the dangerous case: it *sounds* like him and says nothing of his.
 
-This definition is canonical here; `craft/edit-craft.md` § The only-Markos check and `voice/voice.md` point to it rather than restating it.
+This definition is canonical here; `craft/edit-craft.md` § Voice-eval gate and `voice/voice-stats.md` point to it rather than restating it.
 
 ---
 

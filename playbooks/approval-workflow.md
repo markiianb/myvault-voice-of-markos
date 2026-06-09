@@ -13,8 +13,8 @@ depends_on:
   - "guardrails"
   - "comment-craft"
   - "target-accounts"
-token_count: ~720
-version: "1.4"
+token_count: ~840
+version: "1.3"
 last_updated: "2026-06-09"
 status: "active"
 summary: >-
@@ -114,11 +114,31 @@ At any point, Markos can pull oversight back to a higher level. If something doe
 - Log the learning in `_analysis/voice-corrections-log.md` (create if it doesn't exist).
 - Update `voice/voice.md` if it's a voice issue, `guardrails/guardrails.md` if a zone issue.
 
-## Pre-launch round (Stage 2)
+## Voice-eval gate (Stage 2 — pre-launch) — REQUIRED to run
 
-Before live commenting launches, Markos wants another feedback round on the voice. Run it the simple way: put a representative batch in front of him — the v3.0 comment drafts plus a few posts — and **capture every edit he makes as a `(draft → final)` pair in [[markos-edits-log]].** Those edits *are* the point of the round: the first real data on how he actually changes things, and what re-grounds the voice over time. No scores, no instruments — just his edits, captured.
+Markos's open ask before live commenting launches is *another feedback round on the updated voice*. The measurement spine makes that round higher-signal instead of cold — but only if it actually runs. The 2026-06-08 audit's #1 fix: an opt-in eval is decorative. So running it is now a **required, ticked precondition** of requesting his round (the *result* stays advisory — see below).
 
-**Launch stays gated** until Markos gives the go-ahead. (See `_analysis/voice-corrections-log.md` for status + the four provisional MVM-153 points.)
+**Required before you request Markos's pre-launch round** (don't open the round until all are ticked):
+
+- [ ] Ran `/myvault:voice-eval --brand voice-of-markos` over the candidate batch (the v3.0 comment drafts + a few posts).
+- [ ] **Attached the flagged-drafts list** — the drafts that failed the PRIMARY originality check (substitution / contrarian-opener / on-point) or that the secondary blend-in doubted. Markos reviews these first, not all of them cold.
+- [ ] Logged the batch line in the trend block below.
+
+**Advisory in verdict, never auto-kill.** A failed substitution or a flagged opener routes a draft to a cadence edit or to Markos himself; the eval never auto-approves or auto-kills, and the Tier system still governs what publishes. Required to *run*; advisory in *outcome*.
+
+**Launch stays gated** regardless of scores — the eval informs the round, it does not end it. (See `_analysis/voice-corrections-log.md` for gated-launch status and the four provisional MVM-153 points.)
+
+### Eval trend (the KPI is the trend, not any single score)
+
+Append one line per batch. The headline metric is **substitution-pass %** (the primary gate — originality, the moat); blend-in is secondary and noisy. Watch the direction over batches: drifting toward or away from his voice.
+
+```
+| date | n drafts | substitution-pass % | median blend-in % | top recurring tell |
+|------|----------|---------------------|-------------------|--------------------|
+| 2026-06-09 | improvement-loop run-1 (1 seed / 3 rounds) | 100% (originality cleared by R1, held) | 0% (blind-judge caught the draft every round) | leaked generator meta-reasoning (R1–2) → written-register smoothness / aphoristic closers (R3) |
+```
+
+The judge→log→ratify flow (auto-surface, human-ratify, never auto-mutate) is documented in `guide.md` § How the eval feeds corrections and `craft/edit-craft.md` § Voice-eval gate. Markos's own edits from the round feed [[markos-edits-log]] (Loop 1).
 
 ## Open items (awaiting confirmation)
 

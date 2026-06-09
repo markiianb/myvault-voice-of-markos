@@ -12,8 +12,8 @@ context_tags:
 depends_on:
   - "voice"
   - "antipatterns"
-token_count: ~1000
-version: "1.3"
+token_count: ~1100
+version: "1.2"
 last_updated: "2026-06-09"
 status: "active"
 summary: >-
@@ -94,7 +94,7 @@ For each hit, apply the "after" rewrite pattern from the casebook.
 - "Right?" in a post → cut. Max once in a comment.
 - "You know" → compress out.
 - "Zero-knowledge" → replace with "Zero Trust" (load-bearing correction).
-- Straight quotes, not curly. **Em-dashes: on-voice for Markos — do not strip.** His asides and self-corrections *are* em-dashes; the blunt parent em-dash ban does **not** apply to his voice. This is a judgment call on principle, not a measured number. Don't sand off his asides.
+- Straight quotes, not curly. **Em-dashes: on-voice for Markos — do not strip.** His asides and self-corrections *are* em-dashes; the blunt parent em-dash ban does **not** apply to his voice. This is relaxed **on principle**, not a measured number (the earlier ~25/1k figure was circular — see `voice/voice-stats.md` § Em-dash note). Don't sand off his asides.
 - Contractions always: don't, can't, won't — not do not, cannot, will not.
 - No hashtag walls (2–3 relevant max, inline).
 - No emoji in posts.
@@ -210,23 +210,39 @@ If any unchecked box remains, fix before sending.
 
 ---
 
-## The only-Markos check (the one originality test that matters)
+## Voice-eval gate (final QA — originality first)
 
-After the six passes and the Final Test, ask one question — the most useful check this whole system has:
+After the six passes and the Final Test, run near-final drafts through `/myvault:voice-eval
+--brand voice-of-markos`. This is the measurement spine — an *instrument*, not the bar. It complements
+the read-aloud Final Test; it never replaces it and never overrides the pillars, stories, or red
+lines. The axes are ordered by what actually matters — **originality first, human-likeness second**:
 
-> **Could only Markos have written this — or could any competent AI/privacy founder?**
+**PRIMARY — the originality / structure check (non-blind).** This is the gate. Human-likeness is
+table stakes; saying something *only Markos would say* is the moat, and it's the thing a competitor's
+engine can't manufacture. Three sub-checks, all needing author + intent (so a blind judge can't run
+them):
+- **Substitution test** — *could only Markos have published this?* Canonical definition in
+  `craft/antipatterns.md` § The Substitution Test. A fail (interchangeable, anyone-could-have-posted-it)
+  routes to an opinion/story **activation pass** before any word-level edit — the biggest miss there is.
+- **Contrarian-opener detector** — does it *open by engaging the good*, or argue against / reframe /
+  "the harder question is…"? Opening contrarian is the MVM-153 #1 comment defect. (§ The Contrarian Opener.)
+- **On-point pre-check** — is the angle about *this* post's real subject, not our hobby-horse bent
+  onto it? Off-point → skip/redraft. (§ The Off-Point Comment.)
 
-A pass deploys a real opinion (a pillar), a real story or credential, and a named specific only he'd
-reach for. A fail is competent, on-voice, and *interchangeable* — strip the byline and it could be
-anyone's. On a fail, the fix is an **opinion/story activation pass** (`opinions/opinions.md`,
-`stories/stories.md`), not word-level polish: a draft that says nothing only Markos would say is the
-expensive miss, bigger than any single tell. Canonical definition: `craft/antipatterns.md` §
-The Substitution Test.
+**SECONDARY — blind-lineup blend-in (a noisy tell-finder, never a gate).** The draft is shuffled with
+verbatim-Markos decoys; a blind judge tries to spot the AI one. Output: a **blend-in %** + the tells
+that gave it away. Treat it as advisory only — the judge is noisy and measures *carries-an-AI-tell*,
+not *is-good* or *is-Markos*. Read the tells for concrete edits; never let the number gate a draft.
 
-That's the bar — a question, not a number. There are no numeric voice targets (see
-`voice/voice-stats.md` — parked until we have real data). When Markos edits a draft, capture the
-`(draft → final)` pair in `markos-edits-log.md`; that, over time, is how the system earns real
-measurement instead of guesses.
+**TERTIARY — voice-stats deltas.** Compare to the directional targets in `voice/voice-stats.md`. Large
+misses on the ★ four (specificity, numerals, low hedge, sentence-length SD) are concrete edits. These
+are a directional prior, not a pass/fail line.
+
+**The loop (auto-surface, human-ratify — never auto-mutate).** Deduped tells + gate flags append to
+`_analysis/voice-corrections-log.md` as *unratified candidates*; and when Markos edits a draft, the
+`(draft → final)` pair goes to `markos-edits-log.md` (Loop 1). A human later ratifies real patterns
+into chunk edits (version-bump + changelog). The judge *surfaces*; the human *decides*. Never edit a
+chunk straight from a candidate.
 
 ## Working with AI on Markos content
 
