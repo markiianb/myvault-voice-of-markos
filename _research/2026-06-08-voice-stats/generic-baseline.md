@@ -1,8 +1,12 @@
 <!-- CORPUS FIREWALL: statistics only. Measurement input for voice_stats.py.
-     This is the GENERIC-AI BASELINE — three short "AI/privacy founder on LinkedIn"
+     This is a STRAWMAN / ANTI-EXEMPLAR — three short "AI/privacy founder on LinkedIn"
      posts as a vanilla assistant produces them (no Voice-of-Markos chunks loaded),
-     on topics in Markos's wheelhouse. It exists ONLY to compute the contrastive
-     ratio (Markos ÷ generic AI). It is the anti-exemplar — never imitate it. -->
+     on topics in Markos's wheelhouse. NOTE (2026-06-09): the "×generic-AI" multipliers
+     once derived from this file are RETIRED — it was authored by the same system,
+     deliberately to lose, so the ratios were circular/theater (see voice/voice-stats.md
+     Provenance). What survives independently is the real-model A/B corroboration of the
+     specificity/hedge/numerals GAPS ([[RESULTS]]). Kept only as the documented
+     anti-exemplar — never imitate it, never cite it as a baseline. -->
 
 In today's rapidly evolving AI landscape, it's worth noting that artificial intelligence is becoming an increasingly important part of how modern organizations operate. Many leaders are still figuring out how to navigate this journey, and that's completely understandable. The key, in my view, is to approach AI thoughtfully and strategically. It's not just about adopting the latest tools — it's about building a culture that embraces innovation while remaining grounded in real business value. Companies that get this right will likely find themselves well-positioned for the future. The ones that treat AI as a magic solution may struggle. Ultimately, success comes down to having the right mindset, the right people, and the right approach. What's your experience been with AI adoption? I'd love to hear your thoughts in the comments below.
 

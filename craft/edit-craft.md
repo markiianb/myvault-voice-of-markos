@@ -12,9 +12,9 @@ context_tags:
 depends_on:
   - "voice"
   - "antipatterns"
-token_count: ~1050
-version: "1.1"
-last_updated: "2026-06-08"
+token_count: ~1100
+version: "1.2"
+last_updated: "2026-06-09"
 status: "active"
 summary: >-
   Edit workflow for Markos drafts. Pass 0 preservation scan + six critique passes.
@@ -94,7 +94,7 @@ For each hit, apply the "after" rewrite pattern from the casebook.
 - "Right?" in a post → cut. Max once in a comment.
 - "You know" → compress out.
 - "Zero-knowledge" → replace with "Zero Trust" (load-bearing correction).
-- Straight quotes, not curly. **Em-dashes: on-voice for Markos — do not strip.** Hit the per-voice rate in `voice/voice-stats.md` (his measured cadence runs ~20–25/1k; his asides and self-corrections *are* em-dashes). The blunt parent em-dash ban does **not** apply to his voice. Cutting a draft below ~15/1k flattens his thinking-aloud rhythm.
+- Straight quotes, not curly. **Em-dashes: on-voice for Markos — do not strip.** His asides and self-corrections *are* em-dashes; the blunt parent em-dash ban does **not** apply to his voice. This is relaxed **on principle**, not a measured number (the earlier ~25/1k figure was circular — see `voice/voice-stats.md` § Em-dash note). Don't sand off his asides.
 - Contractions always: don't, can't, won't — not do not, cannot, will not.
 - No hashtag walls (2–3 relevant max, inline).
 - No emoji in posts.
@@ -210,35 +210,39 @@ If any unchecked box remains, fix before sending.
 
 ---
 
-## Voice-eval gate (optional final QA — soft signal)
+## Voice-eval gate (final QA — originality first)
 
-After the six passes and the Final Test, near-final drafts can run through `/myvault:voice-eval
---brand voice-of-markos`. This is the measurement spine grafted from the Spiral teardown — an
-*instrument*, not the bar. It complements the read-aloud Final Test; it never replaces it, and it
-never overrides the pillars, stories, or red lines. Three axes:
+After the six passes and the Final Test, run near-final drafts through `/myvault:voice-eval
+--brand voice-of-markos`. This is the measurement spine — an *instrument*, not the bar. It complements
+the read-aloud Final Test; it never replaces it and never overrides the pillars, stories, or red
+lines. The axes are ordered by what actually matters — **originality first, human-likeness second**:
 
-**1. Blind-lineup (human-ness).** The draft is shuffled with verbatim-Markos decoys and a blind
-judge tries to spot the AI one. Output: a **blend-in %** (higher = reads more human/on-voice) + the
-specific tells that gave it away. Low blend-in → read the tells; they're the highest-leverage edits.
+**PRIMARY — the originality / structure check (non-blind).** This is the gate. Human-likeness is
+table stakes; saying something *only Markos would say* is the moat, and it's the thing a competitor's
+engine can't manufacture. Three sub-checks, all needing author + intent (so a blind judge can't run
+them):
+- **Substitution test** — *could only Markos have published this?* Canonical definition in
+  `craft/antipatterns.md` § The Substitution Test. A fail (interchangeable, anyone-could-have-posted-it)
+  routes to an opinion/story **activation pass** before any word-level edit — the biggest miss there is.
+- **Contrarian-opener detector** — does it *open by engaging the good*, or argue against / reframe /
+  "the harder question is…"? Opening contrarian is the MVM-153 #1 comment defect. (§ The Contrarian Opener.)
+- **On-point pre-check** — is the angle about *this* post's real subject, not our hobby-horse bent
+  onto it? Off-point → skip/redraft. (§ The Off-Point Comment.)
 
-**2. The non-blind VoM check (originality + structure).** Three gates the blind judge structurally
-can't run (they need the author and intent):
-- **Contrarian-opener detector** — does the draft *open by engaging the good*, or by arguing
-  against / reframing / "the harder question is…"? Opening contrarian is the MVM-153 #1 comment
-  defect. Flag it. (See `craft/antipatterns.md` § The Contrarian Opener.)
-- **On-point pre-check** — is the angle about *this* post's real subject, or is it our hobby-horse
-  (tools, privacy) bent onto an off-topic post? If off-point → skip/redraft. (§ The Off-Point Comment.)
-- **Substitution test** — *could any AI/privacy founder have written this, or only Markos?* A pass
-  deploys a pillar, a story, or a named-specific anchor only he has. If a generic founder could have
-  posted it verbatim, it fails — flag for an opinion/story activation pass (`opinions/`, `stories/`).
+**SECONDARY — blind-lineup blend-in (a noisy tell-finder, never a gate).** The draft is shuffled with
+verbatim-Markos decoys; a blind judge tries to spot the AI one. Output: a **blend-in %** + the tells
+that gave it away. Treat it as advisory only — the judge is noisy and measures *carries-an-AI-tell*,
+not *is-good* or *is-Markos*. Read the tells for concrete edits; never let the number gate a draft.
 
-**3. Voice-stats deltas.** Run the meter and compare to `voice/voice-stats.md` targets. Large
-misses on the ★ four (specificity, numerals, em-dash rate, low hedge) are concrete edits.
+**TERTIARY — voice-stats deltas.** Compare to the directional targets in `voice/voice-stats.md`. Large
+misses on the ★ four (specificity, numerals, low hedge, sentence-length SD) are concrete edits. These
+are a directional prior, not a pass/fail line.
 
 **The loop (auto-surface, human-ratify — never auto-mutate).** Deduped tells + gate flags append to
-`_analysis/voice-corrections-log.md` as *unratified candidates*. A human later ratifies real patterns
-into chunk edits (version-bump + changelog), per the existing correction-log workflow. The judge
-*surfaces*; the human *decides*. Never edit a chunk straight from a candidate.
+`_analysis/voice-corrections-log.md` as *unratified candidates*; and when Markos edits a draft, the
+`(draft → final)` pair goes to `markos-edits-log.md` (Loop 1). A human later ratifies real patterns
+into chunk edits (version-bump + changelog). The judge *surfaces*; the human *decides*. Never edit a
+chunk straight from a candidate.
 
 ## Working with AI on Markos content
 
