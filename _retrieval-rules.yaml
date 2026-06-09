@@ -18,9 +18,16 @@
 #   voice-antipatterns-markos, markos-about) replaced with new IDs matching
 #   consolidated files.
 
-version: "2.4"
-last_updated: "2026-06-08"
+version: "2.5"
+last_updated: "2026-06-09"
 
+# v2.5 (2026-06-09, ground-truth loops): no new always_load. `voice-stats` is now a
+#   DIRECTIONAL PRIOR (not derived truth) — same load_if_relevant placement, but read it
+#   that way. The `voice-eval` gate it feeds is now ORIGINALITY-FIRST: the substitution /
+#   pillar-activation check (canonical def in craft/antipatterns.md) is PRIMARY; blind-lineup
+#   blend-in is secondary/advisory. The new markos-edits-log.md is an output_log, NOT a
+#   retrieval chunk — never add it to a load profile. See _manifest.yaml v2.5.
+#
 # v2.4 (2026-06-08, measurement-spine): registered the new `voice-stats` chunk
 #   (contrastive voice targets + em-dash target) as `load_if_relevant` on the
 #   editing/drafting profiles — markos_edit, markos_blog_edit, markos_anchor_post,

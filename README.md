@@ -43,8 +43,9 @@ It follows the same pattern as the Private by Design Newsletter: self-contained 
 
 Two running logs hold every piece of Markos-bylined content:
 
-- `markos-linkedin-posts-log.md` — short-form LinkedIn posts (anchor / newsjack / build-note). Prep + scheduled dates, full body inline, newest at top.
+- `markos-linkedin-posts-log.md` — short-form LinkedIn posts (anchor / newsjack / build-note). Prep + scheduled dates, full body inline, newest at top. Carries `provenance` + pillar/mode/story/engagement tags (v2.5).
 - `markos-linkedin-articles-log.md` — long-form LinkedIn articles. Same structure plus editorial + SEO titles, reading time, pull-quote markers.
+- `markos-edits-log.md` — **(v2.5, ground truth)** every `(system-draft → Markos-final)` edit pair. The highest-signal voice data the program produces (Loop 1) — read periodically to re-ground voice-stats and ratify corrections; never loaded during drafting.
 
 These are records, not retrieval chunks. Load them when answering "what has Markos posted lately?" — not when drafting a new post. The chunks to load for drafting are in the table above.
 

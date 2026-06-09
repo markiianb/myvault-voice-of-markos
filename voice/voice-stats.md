@@ -97,3 +97,39 @@ Run `python3 scripts/voice-stats/voice_stats.py <draft> --json out.json` and com
 large misses on the ★ four are the highest-leverage edits. Then `/myvault:voice-eval <draft>
 --brand voice-of-markos` — note its **primary** axis is the originality/substitution check, not the
 blend-in score. See `craft/edit-craft.md` § Voice-eval gate.
+
+## Per-mode targets (scaffold — mostly pending real data)
+
+The single vector above blends his modes, which is too coarse: his **comment** voice ≠ his
+**anchor-post** voice ≠ his **newsjack**. The right structure is per-mode targets — but we honestly
+can't fill it from the current thin corpus, so most slots are placeholders. **Do not invent
+per-mode numbers.** They fill from `markos-edits-log.md` + provenance-tagged posts (Loop 1), per mode.
+
+| Mode | What we can say now (prior) | Per-mode numeric targets |
+|---|---|---|
+| **Anchor** | The ★ four apply most cleanly here (long-form, specific, his fullest voice). | *pending real per-mode data* |
+| **Newsjack** | Tighter; fewer numerals expected; still no hedging. | *pending real per-mode data* |
+| **Build-note** | Short, one story/scene; first-person highest. | *pending real per-mode data* |
+| **Comment** | He's the *reader*, not the speaker — lower specificity is fine; the substitution test still governs (a pillar/story when the topic fits). Anchoring is optional (see `craft/comment-craft.md`). | *pending real per-mode data* |
+
+Until those fill, use the single directional vector above as the prior and apply judgement per mode.
+
+## Future instruments (hooks — documented, NOT built)
+
+Two upgrades the 2026-06-08 audit pointed to. Both need data we don't have yet, so they are
+**designed, not implemented** — building them now (on thin/absent data) is the exact over-engineering
+the audit flagged. Each has an explicit activation threshold:
+
+- **Recognition lineup** (a `/myvault:voice-eval` variant). Instead of "spot the AI," ask **"which of
+  these did Markos write?"** with his *real* posts in the lineup — measures *is-it-him*, not just
+  *is-it-human* (a far better target). **Activates at ≥10 `provenance: markos-verbatim` (or
+  `markos-edited`) posts** — until then there aren't enough real decoys. Hook noted in the
+  `/myvault:voice-eval` command.
+- **Deterministic style-distance** (a LUAR / STYLEDISTANCE-type content-controlled embedding) as a
+  bias-free second opinion to the noisy LLM blind-judge — it survives impersonation and isolates style
+  from topic. **Deferred:** needs a real reference corpus (Loop 1 output) **and** a model dependency.
+  Do not add the dependency until the corpus exists.
+
+Neither is a backlog promise to build soon — they're hooks so the design is captured and the
+thresholds are explicit. The cheap, high-leverage work is Loop 1 (capture real posts/edits); these
+become *possible and honest* only after it runs.
