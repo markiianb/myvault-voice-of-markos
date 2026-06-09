@@ -36,6 +36,7 @@ Paste a new block at the very top of the **Entries** section, above the most rec
 - **Headline:** (final LinkedIn headline)
 - **Cover image:** (Figma node / asset path, or "none")
 - **URL:** (paste LinkedIn URL once live)
+- **Provenance:** markos-verbatim | markos-edited | system-draft  <!-- tag every entry; if markos-edited, log the (draft→final) pair in markos-edits-log.md -->
 
 <!-- Full article body, verbatim, including subheads and pull quotes -->
 

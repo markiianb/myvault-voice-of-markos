@@ -35,6 +35,7 @@ Paste a new block at the very top of the **Entries** section, above the most rec
 - **Tier:** 1 | 2 | 3
 - **URL:** (paste LinkedIn URL once live)
 - **Visual:** (Figma node / asset path, or "none")
+- **Provenance:** markos-verbatim | markos-edited | system-draft  <!-- tag every entry; if markos-edited, log the (draft→final) pair in markos-edits-log.md -->
 
 <!-- Full post body, verbatim, including line breaks and hashtags -->
 
