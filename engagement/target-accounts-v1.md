@@ -3,12 +3,14 @@ type: research-brief
 status: draft
 owner: mark
 created: 2026-05-11
-updated: 2026-05-11
-tags: [linkedin, engagement, voice-of-markos, target-accounts, q2-2026]
-summary: "50 LinkedIn target accounts for Markos's commenting layer — broad-scope mix across AI, privacy-tech, fintech, mega-CEOs, top LinkedIn voices, journalists/analysts, and UK family-tech bridges. v1 list for May 2026 activation per 2026-05-Plan."
+updated: 2026-06-08
+tags: [linkedin, engagement, voice-of-markos, target-accounts, q2-2026, master-list]
+summary: "65 LinkedIn target accounts for Markos's commenting layer (MASTER list, v2). v1 50-account broad-scope mix (AI, privacy-tech, fintech, mega-CEOs, top voices, journalists, UK family-tech) PLUS the 2026-06-08 batch of 15 new AI investors/founders/operators (Band H). This is the single canonical list — the nominations doc is merged in here."
 ---
 
-# Voice of Markos — Target Account List v1 (50)
+# Voice of Markos — Target Account List (MASTER, v2 · 65)
+
+> **This is the single canonical target-account list.** v1 (Bands A–G, 50 accounts, 2026-05-11) + the 2026-06-08 batch of 15 new AI investors/founders/operators (Band H). The 15 in Band H also live in `[[target-account-nominations]]` pending Markos's monthly approval; once approved they're fully live here. Supersedes the standalone nominations list as the place to read "who do we engage."
 
 > **Purpose:** Source list for the May 2026 engagement layer. Markos's personal LinkedIn (3,201 followers) and the MyVault company page each need 12+ comments/month on target accounts (per [[70-Reviews/Plans/2026-05-Plan]] §Priority 1). This is the v1 universe Sead and Mark draft from.
 >
@@ -424,6 +426,102 @@ The grounding band. These accounts bring MyVault's brand back to the primary B2C
 
 ---
 
+## Band H — New AI investors, founders & operators (15) · added 2026-06-08
+
+The 2026-06-08 batch. Sourced via `[[discovery-methodology]]` (5 parallel research agents → curate), deduped against Bands A–G and the Never-Engage list. Broad across AI investing / building / operating, heavy UK/EU weighting to anchor Markos's register. All ≥2 source URLs with 2025/2026 activity evidence. Tags carried from the nominations doc.
+
+### 51. Nathan Benaich
+- **LinkedIn:** https://uk.linkedin.com/in/nathanbenaich (HIGH) · **Tags:** `ai-investor` `sovereign-ai` `open-source` `state-of-ai` `uk` · ~43–70k
+- **Role:** Founder & GP, Air Street Capital (author, annual *State of AI Report*)
+- **Why fit:** UK-anchored, data-driven, evidence-over-hype; *State of AI* now tracks the open-weights wave and the AI-sovereignty fracture — straight into Markos's structural-critique pillar.
+- **Hook:** Sovereign AI — for a UK/EU enterprise builder, sovereignty is data control at the application layer; self-hostable open weights make it real.
+
+### 52. Sarah Guo
+- **LinkedIn:** https://www.linkedin.com/in/sarahxguo/ (HIGH) · **Tags:** `ai-investor` `open-source` `inference-infra` `value-stack` `us` · 60k+
+- **Role:** Founder & Managing Partner, Conviction
+- **Why fit:** Backs Mistral + Baseten; argues value moves down the stack as models commoditise. Strong surface for "AI is one component; the engineered system is the moat."
+- **Hook:** Pragmatic AI + privacy-as-control — value accrues to the data architecture and the Zero-Trust control layer, not the model.
+
+### 53. Jerry Chen
+- **LinkedIn:** https://www.linkedin.com/in/jerrychenprofile/ (MEDIUM) · **Tags:** `ai-investor` `data-architecture` `moats` `systems-of-intelligence` `us` · ~20–30k
+- **Role:** Partner, Greylock
+- **Why fit:** Author of "New New Moats" / "Systems of Intelligence" — the durable moat is proprietary data + the system around the model. Almost verbatim Markos's data-architecture pillar.
+- **Hook:** Knowledge-graph / data-architecture — the moat is the data plumbing; add the Zero-Trust control layer that makes it defensible.
+
+### 54. Harrison Chase
+- **LinkedIn:** https://www.linkedin.com/in/harrison-chase-961287118/ (HIGH) · **Tags:** `ai-founder` `agents` `auditability` `observability` `open-source` · ~50k
+- **Role:** Co-Founder & CEO, LangChain
+- **Why fit:** LangGraph middleware + LangSmith observability are the technical embodiment of agent-permissions-and-auditability.
+- **Hook:** Agent permissions & auditability — middleware/observability is where "you can't just blame the AI" becomes an engineering contract.
+
+### 55. Jerry Liu
+- **LinkedIn:** https://www.linkedin.com/in/jerry-liu-64390071/ (HIGH) · **Tags:** `ai-founder` `knowledge-layer` `document-intelligence` `data-architecture` `agents` · ~45k
+- **Role:** Co-Founder & CEO, LlamaIndex
+- **Why fit:** The document-parsing / knowledge layer beneath agents maps onto Markos's knowledge-graph + enterprise document-intelligence pillar.
+- **Hook:** Knowledge-graph / data-architecture — a structured knowledge layer is the foundational infra under agentic AI.
+
+### 56. Jeremy Howard
+- **LinkedIn:** https://www.linkedin.com/in/howardjeremy/ (HIGH) · **Tags:** `ai-founder` `open-source` `small-models` `democratising-ai` `simplicity` · ~100k+
+- **Role:** Co-Founder & CEO, Answer.AI
+- **Why fit:** "Small models for 99% of tasks," open source, tiny mission-driven labs over big-tech concentration — near one-to-one with democratising-AI / pragmatic-AI / simplicity.
+- **Hook:** Pragmatic AI + simplicity — small open-weight models you run yourself cover most enterprise tasks; AI as one engineered component.
+
+### 57. Chip Huyen
+- **LinkedIn:** https://www.linkedin.com/in/chiphuyen/ (HIGH) · **Tags:** `ai-operator` `systems-over-models` `ai-engineering` `data-prep` `reliability` · ~320k
+- **Role:** Author, *AI Engineering* (O'Reilly); builder (ARMES)
+- **Why fit:** "Systems over models" — optimise the whole engineered workflow; data prep + reliability beat trendy tools. Almost verbatim Markos's pragmatic-AI pillar.
+- **Hook:** Pragmatic AI — AI is one component of a bigger engineered system; the win is data architecture and reliability.
+
+### 58. Andriy Burkov
+- **LinkedIn:** https://www.linkedin.com/in/andriyburkov/ (HIGH) · **Tags:** `ai-operator` `hype-critique` `open-source` `rigour` `democratising-ai` · ~461–488k
+- **Role:** AI author/educator (*The Hundred-Page ML / Language Models* books)
+- **Why fit:** Leading voice puncturing AGI/agent hype and demanding rigour; argues subsidised closed-LLM pricing is a VC-propped trap. Direct peer for Markos's structural-critique register.
+- **Hook:** Structural critique + accountability — build on open weights you can run and audit, not a rented subsidised black box.
+
+### 59. Sebastian Raschka
+- **LinkedIn:** https://www.linkedin.com/in/sebastianraschka/ (HIGH) · **Tags:** `ai-operator` `open-weights` `first-principles` `education` `architecture` · ~300k+
+- **Role:** LLM Research Engineer, Lightning AI; author *Build a Large Language Model From Scratch*
+- **Why fit:** Dissects the open-weight models Markos names (Qwen3, gpt-oss, DeepSeek, Gemma) from first principles — ideal surface for "why open weights matter for systems you control."
+- **Hook:** Open-source & sovereign AI — open weights are what let an enterprise self-host, audit, and meet data-residency rules.
+
+### 60. Maxime Labonne
+- **LinkedIn:** https://uk.linkedin.com/in/maxime-labonne (HIGH) · **Tags:** `opensource-sovereign` `edge-inference` `open-weights` `fine-tuning` `uk` · ~70k
+- **Role:** Head of Post-Training, Liquid AI
+- **Why fit:** UK-based; builds small on-device/edge LLMs (LFM2); "fine-tune only when prompting won't do" realism is pure simplicity-over-customisation.
+- **Hook:** Open-source + edge/sovereign AI — on-device models you control are the practical path; keep AI small and local.
+
+### 61. Nathan Lambert
+- **LinkedIn:** https://www.linkedin.com/in/natolambert/ (HIGH) · **Tags:** `opensource-sovereign` `fully-open-models` `us-china` `self-host` `data-residency` · ~40k+
+- **Role:** ML Researcher (Olmo/Tulu), Allen Institute for AI (Ai2); author *Interconnects*
+- **Why fit:** Builds genuinely-open models (Olmo 3 — open data + weights + recipe); definitive analysis of the US-China open-model race.
+- **Hook:** Sovereign AI — fully-open (data + weights + recipe) is what enables self-hosting and data residency for a regulated enterprise.
+
+### 62. Sophia Yang
+- **LinkedIn:** https://www.linkedin.com/in/sophiamyang/ (HIGH) · **Tags:** `opensource-sovereign` `open-weights` `european-ai` `enterprise` `eu` · ~30k+
+- **Role:** Head of Developer Relations, Mistral AI
+- **Why fit:** Fronts Mistral's open-weights releases + "AI for practical enterprise use" from a European base — ideal for UK/EU sovereign-AI positioning.
+- **Hook:** Open-source + sovereign AI (EU) — open models you run and govern beat rented closed APIs.
+
+### 63. Oliver Patel
+- **LinkedIn:** https://uk.linkedin.com/in/oliver-patel (HIGH) · **Tags:** `applied-governance` `accountability` `agent-governance` `human-oversight` `uk` · ~53k
+- **Role:** Head of Enterprise AI Governance, AstraZeneca; IAPP AIGP Faculty; OECD AI Risk Expert Group
+- **Why fit:** UK enterprise practitioner on AI accountability + agent governance; posts on human oversight + auditability map onto "you can't just blame the AI."
+- **Hook:** Accountability + agent auditability — the org owns the AI's outputs; that has to be engineered in.
+
+### 64. Philip Rathle
+- **LinkedIn:** https://www.linkedin.com/in/prathle/ (HIGH) · **Tags:** `applied-governance` `knowledge-graph` `graphrag` `agent-governance` `data-architecture` · ~10k
+- **Role:** Chief Technology Officer, Neo4j
+- **Why fit:** Posts on GraphRAG, agentic memory, deterministic reasoning, governance + auditability — exactly Markos's knowledge-graph + agent-permissions ground.
+- **Hook:** Knowledge-graph data-architecture + agent governance — a governed knowledge layer makes agents auditable and deterministic enough to trust.
+
+### 65. Kai Waehner
+- **LinkedIn:** https://www.linkedin.com/in/kaiwaehner/ (HIGH) · **Tags:** `applied-governance` `ai-as-component` `data-ownership` `open-standards` `vendor-lock-in` · ~40k
+- **Role:** Global Field CTO, Confluent; author/speaker
+- **Why fit:** AI as one part of a bigger engineered data system, open standards over vendor lock-in, data ownership — matches "AI as one component," open-source/sovereign + data-architecture pillars.
+- **Hook:** Pragmatic AI + data ownership — AI is one component in a streaming data architecture; open standards beat vendor lock-in.
+
+---
+
 ## Verification flags — check before first contact
 
 | # | Name | Flag |
@@ -485,4 +583,5 @@ This list was built by parallel research agents (one per band) plus a methodolog
 
 | Date | Change | By |
 |---|---|---|
+| 2026-06-08 | **v2 — MASTER list (65).** Merged the 2026-06-08 batch of 15 new AI investors/founders/operators in as **Band H** (deduped vs Bands A–G + Never-Engage; built via 5 parallel discovery agents → curate). Retitled as the single canonical target-account list; the standalone nominations doc now points here. | Mark / Claude |
 | 2026-05-11 | v1 list. 50 accounts compiled from 9 parallel research agents (5 narrow Sarah-anchored + 5 broad tech/AI/CEO + methodology). Mid-task scope pivot from narrow-Sarah to broad-LinkedIn-reach per Mark's redirect. | Mark / Claude |
