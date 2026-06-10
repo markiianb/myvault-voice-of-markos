@@ -1,6 +1,6 @@
 ---
 chunk_id: "voice"
-version: "3.4"
+version: "3.5"
 last_updated: "2026-06-10"
 status: "active"
 ---
@@ -110,7 +110,7 @@ Mix long and short sentences. If every sentence is the same length, rewrite. Don
 | Anchor | 250-600 words | Mix long explanation + short landings |
 | Newsjack | 100-250 words | React, position, walk away |
 | Build-note | 80-200 words | One insight, one story, done |
-| Comment | 2-4 sentences quick; up to ~8 on in-wheelhouse technical posts | Lead with what's good in the post, then add the take — never open contrarian |
+| Comment | 1–3 sentences default; up to ~8 only on the standout in-wheelhouse take where every sentence carries a concrete hook. Length follows the content; a batch needs a real spread | Lead with what's good in the post, then add the take — never open contrarian |
 
 ---
 
@@ -124,7 +124,7 @@ What changes for comments (per `comment-craft.md` v3.0 / MVM-153):
 - **Four frameworks, not three.** Agree-and-Add (default), Share-Experience, Question-and-Extend, Another-Angle. (v2.1's three-framework cut is reversed.)
 - **Stories and identity load *conditionally*, gated.** A credential story deploys only when the post topic is *at least part* of what the story answers, and the same credential is never reused in a short window. `stories` and `identity` sit in `load_if_relevant` for `markos_comment`/`markos_reply` (`_retrieval-rules.yaml` v2.3) — not removed (v2.1's over-correction), not always-on (v1's failure). If a credential surfaces on an off-topic post, the gate failed — drop it.
 - **Anchoring is optional.** The post-level "every big claim anchored" rule does not bind comments. When a gated story *does* fit, its specificity is welcome; when it doesn't, a reaction without a credential is correct.
-- **Length:** 2–4 sentences for quick reactions and humour; **up to ~8 on in-wheelhouse technical posts** where Markos has a real build-level take with concrete hooks. Don't truncate a genuine technical comment to a short-length rule.
+- **Length:** 2–4 sentences for quick reactions and humour; **up to ~8 on in-wheelhouse technical posts** where Markos has a real build-level take with concrete hooks. Don't truncate a genuine technical comment to a short-length rule — but **long is earned, not default** (v3.5/Mark 2026-06-10): default to the shortest version that lands, and vary length across a batch (his own clean accepts were short terse replies).
 - **Topic lens:** lead with utility / value / ROI / AI-readiness ahead of privacy/security — he's over-indexed on privacy.
 - **Skipping is valid.** Thin teasers, marketing-tech-AI posts (competitor moat), and off-point posts are legitimate non-comments. Don't force a comment to hit volume.
 - **Peer-at-lunch test:** would a peer scrolling LinkedIn over lunch read this as a person typing in thirty seconds, or as a brand deployment? Should read as a person.

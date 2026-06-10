@@ -19,8 +19,8 @@ depends_on:
   - "guardrails"
   - "stories"
   - "antipatterns"
-token_count: ~1900
-version: "3.1"
+token_count: ~2000
+version: "3.2"
 last_updated: "2026-06-10"
 status: "active"
 summary: >-
@@ -100,7 +100,9 @@ From the 20-post comment-feedback review (full analysis: `_analysis/2026-06-04_C
 
 **Engage the actual content — and lead with the good.** The single biggest correction. The generated comments opened contrarian ("the harder question is…", "but", a reframe) and reacted to the post's headline. Markos: *"they were contrarian and steered to an argument against. Vs calling out something good then giving my own take or lasering in on a specific point to expand on."* So: read the post **and whatever sits behind its link**, name something specific that's genuinely good, then add the take or laser on one point. A harder question is fine *after* genuine engagement — never as the opener.
 
-**Length — let technical comments run.** The 2–4 / 3–5 sentence guides above hold for quick reactions and humour. On in-wheelhouse technical posts where Markos has a real build-level take, allow up to ~8 sentences. His actual comments reach for concrete hooks (hybrid vector+graph search and caching, evals, LLM councils and model-mixing, scoped/auditable agent primitives, shared-memory edge hardware). Do not truncate them to hit a short-length rule.
+**Length — let technical comments run, but long is earned, not default (v3.2).** The 2–4 / 3–5 sentence guides above hold for quick reactions and humour. On in-wheelhouse technical posts where Markos has a real build-level take, allow up to ~8 sentences. His actual comments reach for concrete hooks (hybrid vector+graph search and caching, evals, LLM councils and model-mixing, scoped/auditable agent primitives, shared-memory edge hardware). Do not truncate them to hit a short-length rule.
+
+The 2026-06-08 batch over-applied this: most target posts *are* technical, so ~8 sentences became the de facto default (Mark, 2026-06-10: "some of them are too lengthy… vary the length based on the content; some of them can be short"). The evidence already said so — Markos's 4 clean accepts in his own review were all **short, no-story, substance-or-humour replies**, and several of his own comments are 2–3 sentences (Benioff, Tunguz, Bornet). So: **default to the shortest version that lands.** The ~8 ceiling is for the standout take where every sentence carries a concrete hook — if a sentence is restating or decorating, the comment is one size too big. Length follows the *content*: a one-line post gets a short reaction even when it's in-wheelhouse.
 
 **Story-gating.** Deploy a credential story (the family software company, father on the Visa system, 100%-family-held, services 10–15×) only when the post topic is *at least part* of what the story answers — Markos's exact rule. And never reuse the same credential within a short window. Evidence: he kept the story where the topic fit (direct-pay, services scale) and declined it where it only loosely fit (cadence) or where he'd already used it (the 15× twice). The `stories` and `identity` chunks are loaded *conditionally* for comments under this gate (`_retrieval-rules.yaml` v2.3) — not removed (v2.1), not always-on (v1).
 
@@ -160,6 +162,7 @@ The no-reuse rule was per-account; these are per-batch:
 - No opener pattern recurs within a batch — at paraphrase level, not just verbatim ("The line that lands for me" = "The line that jumps out" = same pattern).
 - No credential phrasing appears more than twice per batch.
 - No banned tell appears at all (`antipatterns.md` § The Template Echo).
+- **Length varies with the content (v3.2).** A healthy batch shows a real spread — a good share of 1–3 sentence reactions, mid-length takes, and only the occasional earned long one. If most drafts in a batch run 5+ sentences, that's a length echo: same defect as the opener echo, expressed in size. Re-cut the ones whose content doesn't earn the length.
 - Before a batch ships to review, run the batch QA step (`CLAUDE.md` § Batch QA for comment drafts).
 
 ## Universal rules
@@ -185,6 +188,7 @@ The no-reuse rule was per-account; these are per-batch:
 
 | Version | Date | Change | By |
 |---|---|---|---|
+| 3.2 | 2026-06-10 | **Length variance (Mark's review, same day).** Long is earned, not default: the batch over-applied the technical-length allowance (~8 became de facto default because most targets are technical). Default to the shortest version that lands; ~8 only when every sentence carries a concrete hook. New batch rule: length must show a real spread (1–3 sentence reactions + mid + occasional long); a batch where most drafts run 5+ sentences is a length echo. Grounded in Markos's own data: his 4 clean accepts were short terse replies; several of his own comments are 2–3 sentences. | Mark |
 | 3.1 | 2026-06-10 | **Texture reconciliation (Sead's review of the 2026-06-08 batch: "standard AI speech").** Added the texture pack: real opener bank, credential-phrasing rotation (verbatim "25 years building enterprise systems" banned — he never writes it), syntactic fingerprint, density norm, batch-level diversity rules. Replaced the single Agree-and-Add example shape (the template-echo source: stamped across all 35 drafts) with verbatim real-Markos examples per framework + the menus-not-templates rule. Cross-refs `antipatterns.md` § The Template Echo and `CLAUDE.md` § Batch QA. Rules from v3.0 unchanged. Plan: `_analysis/2026-06-10-comment-system-v3.1-texture-plan.md`. | Mark |
 | 3.0 | 2026-06-08 | **Supersedes v2.1.** Integrated Markos's MVM-153 review (2026-06-04). Restored the four kudos-first frameworks and gated credential stories that v2.1 had removed. Added: engage-the-actual-and-linked-content + lead-with-the-good opening (contrarian opener banned — the real defect); length up to ~8 sentences on technical posts; story-gating ("at least part of the topic" + no-reuse window); on-point pre-check; value/ROI-over-privacy topic lens; marketing-tech-AI no-go. Four provisional decisions held pending Markos's next round (see inline `confirm next round` markers + `_analysis/voice-corrections-log.md`): version 3.0 not "1.1"; daily cap 7–8 not 15; hashtags allowed in Markos's own hand only; launch still gated. | Mark |
 | 2.1 | 2026-05-13 | Removed Share-Experience and all credential pathways; stories not loaded; three frameworks (React/Ask/Another angle); cap 15→7–8. *Superseded by 3.0 — the audit mis-diagnosed the defect as credentials; Markos's own review found it was the contrarian opener.* | Mark |

@@ -1,6 +1,6 @@
 # Voice of Markos System
 
-**Version:** 2.9 (matches `_manifest.yaml`; this header had drifted to 2.4 — fixed 2026-06-10)
+**Version:** 2.9.1 (matches `_manifest.yaml`; this header had drifted to 2.4 — fixed 2026-06-10)
 **Last updated:** 2026-06-10
 **Parent brand:** MyVault
 **Owner:** Mark Bobyliak (steward) · Markos Symeonides (voice holder)
