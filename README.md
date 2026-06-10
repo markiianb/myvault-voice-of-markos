@@ -1,7 +1,7 @@
 # Voice of Markos System
 
-**Version:** 2.4
-**Last updated:** 2026-06-08
+**Version:** 2.9 (matches `_manifest.yaml`; this header had drifted to 2.4 — fixed 2026-06-10)
+**Last updated:** 2026-06-10
 **Parent brand:** MyVault
 **Owner:** Mark Bobyliak (steward) · Markos Symeonides (voice holder)
 
@@ -30,9 +30,9 @@ It follows the same pattern as the Private by Design Newsletter: self-contained 
 | **stories/** | `stories.md` | 12 indexed personal stories with pillar tags, Green/Yellow/Red status, caution flags |
 | **guardrails/** | `guardrails.md` | Red/Yellow/Green zones, never-engage exclusion list, personal comfort matrix |
 | **audience/** | `audience-linkedin.md` | Five audience segments, content matching, what doesn't land |
-| **craft/** | `antipatterns.md` | Before/after casebook for the five failure portraits, self-audit, editing tests |
+| **craft/** | `antipatterns.md` | Before/after casebook for the failure portraits (incl. The Template Echo + red-line tells), self-audit, editing tests |
 | **craft/** | `post-craft.md` | How posts get built — anchor, newsjack, build-note |
-| **craft/** | `comment-craft.md` | Four kudos-first comment frameworks |
+| **craft/** | `comment-craft.md` | Four kudos-first comment frameworks + the v3.1 texture pack (real opener bank, credential rotation, batch diversity rules) |
 | **craft/** | `newsjack-craft.md` | Reacting to AI/privacy news within 24h |
 | **craft/** | `edit-craft.md` | Six-pass editing workflow, flattening tests, checklists |
 | **playbooks/** | `approval-workflow.md` | Monday rhythm, three-tier approval, trust progression |

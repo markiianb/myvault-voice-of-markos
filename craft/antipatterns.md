@@ -1,7 +1,7 @@
 ---
 chunk_id: "antipatterns"
-version: "1.2"
-last_updated: "2026-06-09"
+version: "1.3"
+last_updated: "2026-06-10"
 status: "active"
 ---
 
@@ -20,6 +20,7 @@ Grep the draft for these five failure shapes:
 3. **Lecture Hall** — Conclusion first, evidence second, thesis restated at the close
 4. **LinkedIn Lottery** — "What do you think?", hashtag walls, symmetric 3-bullet lists
 5. **Hot Take** — Binary declaratives, two-sentence provocations, named-competitor pins
+6. **Template Echo** — Banned-tell phrases ("You nailed…", "the line that lands…", "In 25 years building enterprise systems") and any phrase repeated across drafts in a batch
 
 ---
 
@@ -134,6 +135,7 @@ Write 3-5 specific tells. Common ones:
 3. **Hedged everything** -- every opinion softened with "might," "perhaps," "some argue." Markos doesn't hedge conviction. Drop half the cushions.
 4. **Resolved conclusion** -- a conclusion that neatly ties up everything above. Markos lands on implications that widen scope. Closed-box conclusions are AI tells.
 5. **Missing "I"** -- if a paragraph reads like it could have come from a company page, rewrite with "I" and a specific experience.
+6. **Batch repetition** -- did any phrase in this draft appear in another draft from this batch, or in a craft-chunk example? If yes, it's a Template Echo -- rewrite from his real corpus, don't word-swap.
 
 Fix the tells. Then repeat the two-pass. If new tells surface, fix those too.
 
@@ -183,6 +185,32 @@ This definition is canonical here; `craft/edit-craft.md` § Voice-eval gate and 
 *Originated 2026-05-13 from the 20-comment audit; revised 2026-06-08 (v1.1, MVM-153) after Markos's own 20-post review. These show up in short-form engagement and don't always appear in the Five Failure Portraits above. The Final Test applies, but comments fail in shapes the post-level tests miss.*
 
 The Final Test for comments shifts in one place: claim **2 is downgraded** — the "every big claim anchored by something specific" rule applies when Markos is the speaker (posts), not when he's the reader (comments). A gated credential story is welcome when the post topic fits; it is not *required*.
+
+### The Template Echo *(the v3.1 defect — Sead's 2026-06-10 review)*
+
+The chunk's own examples become the voice. Parallel drafting agents each treat an illustrative phrase as the target register, and a batch of individually-passable comments comes out collectively monotone — Sead's verdict on the 2026-06-08 batch: *"standard AI speech… I don't know how to make it talk like Markos."* Measured on that batch: "25 years" 9×, "the line that lands" ~10×, "is the part most [people skip/miss]" 6×, "You nailed" 5×. Source: the single example sentence then in `comment-craft.md`. Note also: several portraits below (Diagnostic-but-Soft Close's "Curious whether…") were *already banned* and appeared in the batch anyway — per-draft rules don't survive parallel generation without the batch QA step (`CLAUDE.md` § Batch QA).
+
+**The red-line tell list (binary bans — posts AND comments, same enforcement class as parent banned words):**
+
+- **Openers:** "You nailed…" · "The line that lands (for me / hardest)…" · "The X point is the one most [people / business cases] skip/miss…" · "…is the part most people skip past" · "What stands out…" · "From where I sit…" (as opener)
+- **Constructions:** "isn't an X you bolt on; it's a Y you design in" and every not-X-but-Y pseudo-profound contrast · "quietly [becomes / changes / lives]" · "that's the real shift/signal" · "…is doing maybe 10% of the work — the other 90%…" as a stock ratio
+- **Credential:** "In 25 years building enterprise systems" and close variants — he never writes this; use the rotation bank in `comment-craft.md` § Credential phrasing rotation
+
+These are red lines, not frequency targets — one occurrence is a defect (Principle 3: a target you can game stops measuring; a ban can't be gamed).
+
+**Symptoms:**
+
+- Any red-line phrase, anywhere.
+- Any opener pattern recurring within a batch, at paraphrase level ("the line that lands" = "the line that jumps out").
+- A draft whose phrasing matches an example in any craft chunk.
+
+**Before (2026-06-08 batch, real draft):**
+> "You nailed the failure mode — teams optimise one metric and ignore the system. I've watched the same pattern across 25 years of enterprise delivery…"
+
+**After (his actual register — real Markos, same move):**
+> "@Aaron, agree on the services scale point. Ratio in enterprise software ran around 10-15x in my last business, and frankly agents-rewiring-process likely makes the tail larger this time…"
+
+The fix is never word-substitution on the banned phrase — it's drafting from his real corpus (`_analysis/2026-06-04-comment-feedback-markos-responses-and-voice-synthesis.md` Appendix A) instead of from the chunk's illustrations.
 
 ### The Contrarian Opener *(the #1 defect — MVM-153)*
 

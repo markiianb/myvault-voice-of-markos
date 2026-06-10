@@ -6,8 +6,8 @@ subcategory: "measurement"
 context_tags: [stylometry, voice-targets, quality-check, directional-prior, ai-tells]
 depends_on: ["voice"]
 token_count: ~800
-version: "1.1"
-last_updated: "2026-06-09"
+version: "1.2"
+last_updated: "2026-06-10"
 status: "active"
 summary: >-
   Directional voice targets for Markos's LinkedIn/blog content — measurable properties where
@@ -97,6 +97,14 @@ Run `python3 scripts/voice-stats/voice_stats.py <draft> --json out.json` and com
 large misses on the ★ four are the highest-leverage edits. Then `/myvault:voice-eval <draft>
 --brand voice-of-markos` — note its **primary** axis is the originality/substitution check, not the
 blend-in score. See `craft/edit-craft.md` § Voice-eval gate.
+
+**Tell-frequency report (v1.2 — batch-level, report-only).** For a multi-draft batch, also count
+occurrences of the red-line tells (`antipatterns.md` § The Template Echo: "You nailed", "the line
+that lands", "is the part most", "In 25 years", "From where I sit", "quietly", not-X-but-Y
+contrasts) and any opener pattern recurring across drafts. This is a **reported indicator, not a
+target** — the *rule* is binary (one red-line hit = defect, fix it), and the count exists only to
+show batch monotony at a glance. Validated 2026-06-10: this exact count is how Sead's "standard AI
+speech" finding was confirmed ("25 years" 9×, "the line that lands" ~10× across 35 drafts).
 
 ## Per-mode targets (scaffold — mostly pending real data)
 

@@ -1,11 +1,12 @@
 brand: "Voice of Markos"
 parent_brand: "MyVault"
-version: "2.8"
+version: "2.9"
 last_updated: "2026-06-09"
 total_chunks: 18
 voice_holder: "Markos Symeonides"
 steward: "Mark Bobyliak"
 changelog:
+  - "2.9 (2026-06-10, texture-reconciliation): Fixed the TEMPLATE ECHO defect from Sead's review of the 2026-06-08 comment batch (35 drafts, rule-compliant but 'standard AI speech': the chunk's single example sentence was stamped batch-wide — '25 years' 9x, 'the line that lands' ~10x, 'You nailed' 5x). comment-craft.md → v3.1 (texture pack mined verbatim from Markos's 13 real comments: real opener bank, credential-phrasing rotation with 'In 25 years building enterprise systems' banned verbatim, syntactic fingerprint, density norm, batch-level diversity rules; single example shape replaced with real-Markos examples per framework; examples-are-menus-never-templates). antipatterns.md → v1.3 (The Template Echo portrait + the red-line tell list, binary bans; Quick Scan item 6; batch-repetition self-audit question). post-craft.md → v1.1 (credential rotation; menus-not-templates; tell scan in the publish sequence — Sead flagged posts too). voice.md → v3.4 (written-texture note: stop sanding off his typed-in-the-moment register; imitation source is his real corpus, never chunk examples). voice-stats.md → v1.2 (tell-frequency batch report, reported indicator never a target). CLAUDE.md: mandatory Batch QA step for comment batches (cross-batch repetition scan + blind-lineup spot check) — per-draft rules don't survive parallel generation. Ground truth imported vault-side (_analysis/2026-06-04-comment-feedback-markos-responses-and-voice-synthesis.md). Next: re-draft the 35 under v3.1, Sead pre-review, then Markos's Stage 2 round. Launch stays gated. Plan: _analysis/2026-06-10-comment-system-v3.1-texture-plan.md."
   - "2.8 (2026-06-09, restore-with-constitution): Reverted the v2.7 simplification and restored the measurement spine to its v2.6 honest form (voice-stats directional-prior vector, the /myvault:voice-eval gate, playbooks/improvement-loop.md, the trend block, the log tags) — per Mark's call to keep the capability, not park it. The spine that came back is the HONEST one: the v2.5 fixes (no strawman ×-multipliers, em-dash demoted, originality the PRIMARY gate, substitution test canonical) are intact; we did NOT resurrect the naive v2.4 numbers. NEW: PRINCIPLES.md (v1.0) — the constitution layer the system never had. It states the Spiral learnings as governing principles (curated substance not averaged samples; originality is the moat; measure only against real ground truth; capture real edits; the loop never auto-mutates; keep instruments ready-but-honest). This is what makes the restore sound rather than a relapse: the spine is wired AND governed — its numbers are explicitly a directional prior until Markos's real edits (markos-edits-log, Loop 1) make them trustworthy. The standing test before adding machinery: does it have real ground truth? If not, park don't build. Launch stays gated. (v2.7, 2026-06-09, was the brief simplification that cut the spine; reversed here — the lesson it carried is now preserved as PRINCIPLES.md rather than as a deletion.)"
   - "2.6 (2026-06-09, evaluation + improvement loop): Specified and RAN the round-over-round improvement loop (the backlog item v2.4/v2.5 left as single-pass-only). NEW chunk playbooks/improvement-loop.md (v1.0): the discrimination test + the loop procedure + the hard honesty limits (no real Markos in the loop) + never-optimize-blend-in + never-auto-mutate. First real run (_research/2026-06-09-improvement-loop/run-1.md, workflow wf_b784c01c-bdd) on the frontier-model post: discrimination test ranked gold > system-draft > anti correctly; originality converged by R1 and held, but the blind-lineup caught the draft at high confidence ALL 3 rounds (R1-2 a leaked generator meta-reasoning preamble; R3 written-register smoothness) and voice-stats did not converge — an honest 'mechanism works, not validated' result. Surfaced 5 system-fix candidates to _analysis/voice-corrections-log.md, ALL UNRATIFIED (none applied; most are generator-wiring, not chunk edits). approval-workflow → v1.3 (trend row added). NOT done (held to discipline): no canon auto-mutated, nothing ratified on one synthetic run, no claim the loop validates against real Markos. The real next step is Loop 1 data, not another loop run. Launch stays gated."
   - "2.5 (2026-06-09, ground-truth loops): First-principles improvement per the 2026-06-08 adversarial audit — the system had ZERO ground truth (built from one voice session + self-authored renderings). Closes the missing feedback loops + fixes calibration honesty; process-first, deferring precision instruments that need data we don't have. (A) Honesty: voice-stats → v1.1 strikes the ×generic-AI multiplier column (self-authored strawman) and relabels rates as a DIRECTIONAL PRIOR; the em-dash target is demoted to a qualitative on-principle rule (the 25/1k number was circular — from our own after-examples). voice → v3.3, edit-craft → v1.2 mirror it; generic-baseline marked a retired strawman. (B) Loop 1 (keystone): NEW markos-edits-log.md captures every (system-draft → Markos-final) pair (the highest-signal voice data, previously discarded); provenance field added to both logs. (C) Loop 3: the eval now MUST run — a required ticked precondition of Markos's pre-launch round (advisory verdict), with a trend block (substitution-pass % primary). (D) Substitution test → PRIMARY gate (canonical def in antipatterns → v1.2); blind-lineup demoted to secondary. (E) Scaffolding behind hooks: per-post pillar/mode/story/engagement tags; per-mode voice-stats slots (pending real data); recognition-lineup (≥10 real posts) + style-distance (deferred) documented, NOT built. daily-routine → v1.3, approval-workflow → v1.2. NOT done (refused — the audit's flagged failure mode): style-embedding pipeline, engagement analytics, fabricated per-mode numbers. Launch stays gated."
@@ -27,13 +28,13 @@ chunks:
   voice:
     path: "voice/voice.md"
     domain: "voice"
-    summary: "How Markos sounds. Tone, four voice qualities, three modes + never-preach, five failure portraits, banned words, rhythm, length rules, the Markos Final Test."
+    summary: "v3.4. How Markos sounds. Tone, four voice qualities, three modes + never-preach, failure portraits, banned words, rhythm + written-texture note (typed-in-the-moment register; imitation source = his real corpus), length rules, comments-are-different, the Markos Final Test."
     token_count: 1200
 
   voice-stats:
     path: "voice/voice-stats.md"
     domain: "voice"
-    summary: "v1.0 (measurement-spine). Contrastive voice vector for Markos — measurable targets (specificity, numerals, em-dash rate, hedges, first-person share, sentence SD, colons) vs a generic-AI baseline, computed from his verbatim speech + curated written renderings. Carries the per-voice em-dash target that supersedes the parent ban. A QA instrument, NOT the voice source; never overrides pillars/red lines. Provenance + repro in _research/2026-06-08-voice-stats/."
+    summary: "v1.2 (measurement-spine + tell report). Contrastive voice vector for Markos — measurable targets (specificity, numerals, em-dash rate, hedges, first-person share, sentence SD, colons) vs a generic-AI baseline, computed from his verbatim speech + curated written renderings. Carries the per-voice em-dash target that supersedes the parent ban. A QA instrument, NOT the voice source; never overrides pillars/red lines. Provenance + repro in _research/2026-06-08-voice-stats/."
     token_count: 750
 
   identity:
@@ -69,19 +70,19 @@ chunks:
   antipatterns:
     path: "craft/antipatterns.md"
     domain: "craft"
-    summary: "Before/after casebook for the five failure portraits. Quick scan checklist, self-audit, Conversation Test, LA Story Test, Final Test."
+    summary: "v1.3. Before/after casebook for the failure portraits incl. The Template Echo (red-line tell list, binary bans — posts AND comments). Quick scan checklist (6 shapes), self-audit incl. batch-repetition check, Conversation Test, LA Story Test, Final Test, Substitution Test (canonical)."
     token_count: 950
 
   post-craft:
     path: "craft/post-craft.md"
     domain: "craft"
-    summary: "How a Markos post gets built. Anchor / Newsjack / Build-Note formats. Opening, body, close patterns. Draft-to-publish sequence."
+    summary: "v1.1. How a Markos post gets built. Anchor / Newsjack / Build-Note formats. Opening, body, close patterns (menus, never templates). Credential rotation (verbatim 25-years line banned). Draft-to-publish sequence incl. red-line tell scan."
     token_count: 800
 
   comment-craft:
     path: "craft/comment-craft.md"
     domain: "craft"
-    summary: "v3.0 (MVM-153). Four kudos-first comment frameworks: Agree-and-Add, Share-Experience, Question-and-Extend, Another-Angle. Lead-with-the-good/engage-the-content opening (contrarian opener banned); gated credential stories ('at least part of topic' + no-reuse); length up to ~8 on technical posts; on-point pre-check; value/ROI-over-privacy topic lens; marketing-tech-AI no-go; universal rules; escalation triggers."
+    summary: "v3.1 (texture). Four kudos-first comment frameworks + THE TEXTURE PACK: real opener bank, credential-phrasing rotation (25-years line banned verbatim), syntactic fingerprint, density norm, batch-level diversity rules — mined verbatim from Markos's 13 real comments. Examples are menus, never templates. v3.0 rules unchanged: lead-with-the-good (contrarian opener banned), gated credential stories + no-reuse, ~8 sentences on technical posts, on-point pre-check, value/ROI topic lens, marketing-tech-AI no-go."
     token_count: 950
 
   newsjack-craft:

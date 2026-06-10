@@ -15,8 +15,8 @@ depends_on:
   - "stories"
   - "guardrails"
 token_count: ~800
-version: "1.0"
-last_updated: "2026-04-14"
+version: "1.1"
+last_updated: "2026-06-10"
 status: "active"
 summary: >-
   How a Markos post gets built — the three formats (anchor, newsjack, build-note), opening and body and closing patterns, paragraph rhythm, and the draft-to-publish sequence.
@@ -60,6 +60,12 @@ Every Markos post is one of three formats. Pick the format first. Then follow th
 
 Never open with a rhetorical question, a stat alone, or a one-word hook.
 
+These patterns are **menus, never templates** (v1.1) — reusing an example's wording, or the same pattern across consecutive posts, is the Template Echo defect (`antipatterns.md` § The Template Echo). The red-line tell list there binds posts too.
+
+## Credential rotation (v1.1 — Sead's 2026-06-10 review)
+
+Sead: posts "use this line all the time: *In 25 years building enterprise systems*." That phrasing is **banned verbatim** — Markos said it once, speaking; he never writes it. The credential stays, the fossil goes. Rotate his real written phrasings (bank in `comment-craft.md` § Credential phrasing rotation: "in my last business", "sold a software company we owned outright", "Spent years watching…") — or carry the authority in named specifics (Bedrock, Qwen, 15:1, $100k GCP bill) with no credential line at all. Same credential phrasing never appears in consecutive posts.
+
 ## Body patterns
 
 - **Peel-the-onion.** Start broad, narrow to specific, surface the insight.
@@ -86,7 +92,7 @@ Do not stack three short sentences in a row as a "punchy" close. That's an AI te
 1. Draft against relevant pillar in `opinions/opinions.md`.
 2. Pair with a story from `stories/stories.md` where possible (anchor and build-note only).
 3. Check against `guardrails/guardrails.md` for Red/Yellow flags. If Yellow, flag before drafting further.
-4. Run the Two-Pass Self-Audit ("What makes this obviously AI?" — fix the tells).
+4. Run the Two-Pass Self-Audit ("What makes this obviously AI?" — fix the tells), including the red-line tell scan (`antipatterns.md` § The Template Echo) and the batch-repetition check against recent posts in the log.
 5. Read aloud test. If a sentence doesn't sound like something Markos would say out loud, rewrite it.
 6. Queue for Monday approval per `playbooks/approval-workflow.md`.
 

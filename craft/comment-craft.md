@@ -11,24 +11,30 @@ context_tags:
   - "engage-the-content"
   - "story-gating"
   - "length"
+  - "texture"
+  - "banned-tells"
+  - "batch-diversity"
 depends_on:
   - "voice"
   - "guardrails"
   - "stories"
-token_count: ~950
-version: "3.0"
-last_updated: "2026-06-08"
+  - "antipatterns"
+token_count: ~1900
+version: "3.1"
+last_updated: "2026-06-10"
 status: "active"
 summary: >-
   The four kudos-first comment frameworks — Agree-and-Add, Share-Experience,
-  Question-and-Extend, Another-Angle. v3.0 (MVM-153) supersedes v2.1: it
-  RESTORES the four frameworks and gated credential stories that v2.1 removed,
-  and adds Markos's own corrections from the 20-post review — engage the actual
-  + linked content and lead with the good (never open contrarian); longer
-  technical comments allowed; story-gating ("at least part of the topic" +
-  no-reuse); an on-point pre-check; a value/ROI-over-privacy topic lens; and a
-  marketing-tech-AI no-go. The real defect was the contrarian opener, not the
-  credential — so the pathway returns with a gate rather than staying removed.
+  Question-and-Extend, Another-Angle — plus, since v3.1, the TEXTURE PACK:
+  Markos's real opener bank, credential-phrasing rotation, syntactic
+  fingerprint, and batch-level diversity rules, mined verbatim from his 13 own
+  comments (2026-06-04). v3.1 fixes the template-echo defect Sead flagged in
+  the 2026-06-08 batch (35 drafts, rule-compliant but voice-false: "You
+  nailed…", "the line that lands…", "In 25 years building enterprise systems"
+  9×). Examples are menus, never templates. v3.0's rules are unchanged: engage
+  the actual + linked content, lead with the good (contrarian opener banned),
+  longer technical comments allowed, story-gating + no-reuse, on-point
+  pre-check, value/ROI-over-privacy topic lens, marketing-tech-AI no-go.
 ---
 
 # Comment Craft
@@ -47,11 +53,12 @@ Every comment from Markos's account opens with something substantive the poster 
 
 - **Use when:** The post aligns with Markos's position.
 - **Structure:**
-  - Kudos on a specific line ("You nailed it on [X].")
-  - What Markos would add, from his experience ("In my experience rolling out AI across [industry], I've seen [specific insight].")
-  - Optional: pragmatic caveat or nuance ("One thing worth watching — [edge case].")
+  - Kudos on a specific line — name the actual thing he liked, in fresh words. (The *move* is specific praise. "You nailed it on [X]" was one phrasing of it and is now a banned tell — see § The texture pack.)
+  - What Markos would add, from his experience — credential phrasing from the rotation bank, or none.
+  - Optional: pragmatic caveat or nuance.
 - **Length:** 2–4 sentences.
-- **Example shape:** "You nailed it on AI-as-component-not-whole-system. In my experience shipping enterprise systems for 25 years, the model is doing maybe 10% of the work — the other 90% is architecture, data plumbing, governance. That's where most orgs underinvest."
+- **Real example (Markos, on Aaron Levie / services & agents):** *"@Aaron, agree on the services scale point. Ratio in enterprise software ran around 10-15x in my last business, and frankly agents-rewiring-process likely makes the tail larger this time given huge certified data needs for agents…"*
+- **Real example (Markos, on Helen Toner / Beyond P(doom)):** *"Spent years watching teams argue about a single risk number when the real gap was that nobody agreed on what they were uncertain about. Lohn's split — randomness vs. ignorance, Belief vs. Plausibility — frames that gap precisely."*
 
 ### 2. Share-Experience
 
@@ -62,6 +69,7 @@ Every comment from Markos's account opens with something substantive the poster 
   - Extract the generalisable lesson ("The thing we learned was [insight].")
 - **Length:** 3–5 sentences.
 - Cross-ref stories in `stories/stories.md`. Story-gating applies — see the 2026-06-04 refinements below.
+- **Real example (Markos, on Andy Yen / Proton direct-pay):** *"Twelve years without VC is the proof, not the press cycle. … Can relate - sold a software company we owned outright with zero leverage — Similar value proposition, laser focus on slower yet considered growth focussed around the customer…"*
 
 ### 3. Question-and-Extend
 
@@ -71,6 +79,7 @@ Every comment from Markos's account opens with something substantive the poster 
   - His read ("My read is [Markos's position, one sentence].")
   - Genuine question ("How does this land if we're thinking about [adjacent scenario / specific industry]?")
 - **Length:** 2–3 sentences.
+- **Real example (Markos, on Konrad Hippius / knowledge graph):** *"…Although I am curious about whether they use Graph search exclusively or Hybrid Search techniques leveraging advanced semantic search (VectorDB)… It would be interesting to know how the testing and evals are setup as well."* — his questions are build-level and specific, never "curious to hear your thoughts."
 
 ### 4. Another-Angle *(replaces v1's Challenge-Respectfully)*
 
@@ -101,6 +110,58 @@ From the 20-post comment-feedback review (full analysis: `_analysis/2026-06-04_C
 
 **Skipping is a valid outcome.** Thin teasers and off-point posts are legitimate non-comments. Don't force a comment to hit volume.
 
+## The texture pack (v3.1) — how Markos actually writes
+
+> **Why this exists.** The 2026-06-08 batch (35 drafts) followed every v3.0 rule and still read as "standard AI speech" (Sead's review, 2026-06-10). Cause: this chunk carried ONE example sentence, and parallel drafting agents stamped it across the batch — "You nailed" 5×, "the line that lands" ~10×, "In 25 years building enterprise systems" 9×. The example became the voice. Source for everything below: Markos's 13 real comments, `_analysis/2026-06-04-comment-feedback-markos-responses-and-voice-synthesis.md` Appendix A. Read them before drafting a batch.
+
+**Examples are menus, never templates.** Every example in this chunk illustrates a *move*, not wording. Reusing an example's phrasing in a draft is a defect (the Template Echo, `antipatterns.md`). If a phrase from this chunk — or from another draft in the same batch — appears in your draft, rewrite it.
+
+### Real opener bank (verbatim Markos — one per move, vary across a batch)
+
+| Move | His actual opener |
+|---|---|
+| Assertion-first | "Twelve years without VC is the proof, not the press cycle." |
+| Take-first | "My take is that Knowledge Graph traversal is certainly part of it - design of the ontology, hierarchy, schema… is absolutely critical.." |
+| @-mention + agree | "@Aaron, agree on the services scale point." |
+| Direct action | "Adding this to my list, @Andrew." |
+| Experience-implicit | "Spent years watching teams argue about a single risk number when the real gap was that nobody agreed on what they were uncertain about." |
+| Pattern-naming | "The pattern across all three is the same gap solved at a different point in the stack…" |
+| Concession-then-catch | "The Asimov example is the right one, and it is also the catch…" |
+| Easy-half pivot | "Exposing the data layer is the easy half. The harder question is what customer outcomes… are firms trying to achieve" *(his line — the pivot comes after engagement, never as a contrarian opener)* |
+| Prediction | "By the Autumn there will be desktops with 128Gb shared memory for GPU/CPU…" |
+| Observation-from-the-material | "What jumps out from the map is that nearly every 'Not built / Manual' row is blocked on the same thing…" |
+
+"What lands for me is…" appears ONCE in his corpus. Single occurrences are seasoning, not signatures — nothing from this bank repeats within a batch.
+
+### Credential phrasing rotation
+
+The credential is real; the fossilized phrasing is not. **Banned verbatim: "In 25 years building enterprise systems" and close variants** ("In 25 years of shipping/building…", "25 years of enterprise delivery"). He said it once, speaking, in an interview — he never writes it. His real written credential lines:
+
+- "in my last business" / "Ratio in enterprise software ran around 10-15x in my last business"
+- "sold a software company we owned outright with zero leverage"
+- "Speaking as someone who already runs most of my stack through agents"
+- "Spent years watching…"
+- "It is the dirty little secret of Enterprise Software…"
+
+Rotate; or use none — most of his 13 comments carry no credential at all, the authority is in the technical specifics.
+
+### Syntactic fingerprint (descriptive guidance, not targets)
+
+His comments read typed-in-the-moment, not edited: spaced " - " dashes alongside em-dashes; parentheticals with inner spaces "( like AI context for my data beyond RAG )"; doubled-dot ellipses "criticial.."; mid-comment rhetorical questions ("I wonder if it will be the same way with tokens ?"); trailing forward energy ("lets see how we get there!", "Its coming quicker than we think."); UK spellings. **Do not sand this texture off into clean parallel prose — and do not fake it either** (no injected typos, no performed quirks). The instruction is negative: stop polishing, stop balancing every sentence, let a thought trail.
+
+### Density norm
+
+His comments carry 2–4 concrete technical specifics each (named tech: Neo4j Aura, GRPO, LangSmith-class specifics; numbers: 10-15x, 128Gb; mechanisms: caching happy-path traversals, evals setup) — not one abstract thesis elegantly restated. If a draft has zero named mechanisms, it isn't his.
+
+### Batch-level diversity rules (hard)
+
+The no-reuse rule was per-account; these are per-batch:
+
+- No opener pattern recurs within a batch — at paraphrase level, not just verbatim ("The line that lands for me" = "The line that jumps out" = same pattern).
+- No credential phrasing appears more than twice per batch.
+- No banned tell appears at all (`antipatterns.md` § The Template Echo).
+- Before a batch ships to review, run the batch QA step (`CLAUDE.md` § Batch QA for comment drafts).
+
 ## Universal rules
 
 - Never more than 7–8 comments in a day (over-commenting signals automation regardless of writing quality). <!-- confirm next round: Markos's MVM-153 chunk reverted to 15; the 2026-05-12 volume-tell finding kept 7–8. Holding 7–8 pending Markos's confirmation. -->
@@ -124,6 +185,7 @@ From the 20-post comment-feedback review (full analysis: `_analysis/2026-06-04_C
 
 | Version | Date | Change | By |
 |---|---|---|---|
+| 3.1 | 2026-06-10 | **Texture reconciliation (Sead's review of the 2026-06-08 batch: "standard AI speech").** Added the texture pack: real opener bank, credential-phrasing rotation (verbatim "25 years building enterprise systems" banned — he never writes it), syntactic fingerprint, density norm, batch-level diversity rules. Replaced the single Agree-and-Add example shape (the template-echo source: stamped across all 35 drafts) with verbatim real-Markos examples per framework + the menus-not-templates rule. Cross-refs `antipatterns.md` § The Template Echo and `CLAUDE.md` § Batch QA. Rules from v3.0 unchanged. Plan: `_analysis/2026-06-10-comment-system-v3.1-texture-plan.md`. | Mark |
 | 3.0 | 2026-06-08 | **Supersedes v2.1.** Integrated Markos's MVM-153 review (2026-06-04). Restored the four kudos-first frameworks and gated credential stories that v2.1 had removed. Added: engage-the-actual-and-linked-content + lead-with-the-good opening (contrarian opener banned — the real defect); length up to ~8 sentences on technical posts; story-gating ("at least part of the topic" + no-reuse window); on-point pre-check; value/ROI-over-privacy topic lens; marketing-tech-AI no-go. Four provisional decisions held pending Markos's next round (see inline `confirm next round` markers + `_analysis/voice-corrections-log.md`): version 3.0 not "1.1"; daily cap 7–8 not 15; hashtags allowed in Markos's own hand only; launch still gated. | Mark |
 | 2.1 | 2026-05-13 | Removed Share-Experience and all credential pathways; stories not loaded; three frameworks (React/Ask/Another angle); cap 15→7–8. *Superseded by 3.0 — the audit mis-diagnosed the defect as credentials; Markos's own review found it was the contrarian opener.* | Mark |
 | 2.0 | 2026-05-13 | Inverted v1 default; engage-with-substance principle; demoted Share-Experience. *Superseded.* | Mark |

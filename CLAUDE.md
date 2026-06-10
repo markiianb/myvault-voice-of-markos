@@ -12,7 +12,7 @@ The operational system for Markos Symeonides's LinkedIn presence and personal bl
 
 **Writing a newsjack:** add `craft/newsjack-craft.md` + `opinions/opinions.md`
 
-**Writing a comment:** add `craft/comment-craft.md` + `opinions/opinions.md` (check topic strength before engaging)
+**Writing a comment:** add `craft/comment-craft.md` + `opinions/opinions.md` (check topic strength before engaging). Before drafting a *batch*, read Markos's 13 real comments (`_analysis/2026-06-04-comment-feedback-markos-responses-and-voice-synthesis.md` Appendix A, vault-side) — the imitation source is his corpus, never the chunk examples. After drafting a batch, run the Batch QA step below.
 
 **Writing a blog post:** add `craft/blog-craft.md` + `craft/post-craft.md` (for anchor patterns) + `opinions/opinions.md` + `stories/stories.md`
 
@@ -37,6 +37,15 @@ Before Pass 1 of any edit, run these in order:
 
 Absent-but-on-topic pillars and stories are the highest-leverage rewrite opportunity. Flag before voice or copy issues.
 
+## Batch QA for comment drafts (v3.1 — mandatory before any batch ships to review)
+
+Per-draft rules don't survive parallel generation: the 2026-06-08 batch passed every v3.0 rule per-draft and came out collectively monotone (Sead: "standard AI speech" — "25 years" 9×, "the line that lands" ~10× across 35 drafts). So every multi-comment batch runs two checks before a reviewer sees it:
+
+1. **Cross-batch repetition scan (mechanical).** Grep the batch for the red-line tells (`craft/antipatterns.md` § The Template Echo) and build an opener-pattern + credential-phrasing frequency table across all drafts. Any red-line hit, any opener pattern recurring (at paraphrase level), or any credential phrasing appearing >2× → the offending drafts go back with explicit "these N phrasings are already used in this batch — vary" context.
+2. **Blind-lineup spot check (judgement).** Sample ~5 drafts; line each against 2–3 of Markos's real comments (same synthesis doc). If a reviewer-agent can reliably sort system-vs-Markos on register alone, the batch fails — fix is re-drafting from his corpus, not word-swapping tells.
+
+Both checks *flag*; agents re-draft; humans ratify (PRINCIPLES.md — the loop never auto-mutates). Frequencies are reported indicators, never targets (`voice/voice-stats.md` § Tell-frequency report).
+
 ## The sixteen files
 
 | Domain | File | What it covers |
@@ -48,9 +57,9 @@ Absent-but-on-topic pillars and stories are the highest-leverage rewrite opportu
 | **stories/** | `stories.md` | 12 indexed stories with activation scan, Green/Yellow/Red status, pillar tags, cautions |
 | **guardrails/** | `guardrails.md` | Red/Yellow/Green zones with reasoning categories, never-engage exclusion list, personal comfort matrix |
 | **audience/** | `audience-linkedin.md` | Five audience segments, content-to-audience matching, what doesn't land |
-| **craft/** | `antipatterns.md` | Before/after casebook for five failure portraits, self-audit, editing tests |
+| **craft/** | `antipatterns.md` | Before/after casebook for the failure portraits (incl. The Template Echo + red-line tell list), self-audit, editing tests |
 | **craft/** | `post-craft.md` | How to build LinkedIn posts — anchor, newsjack, build-note formats |
-| **craft/** | `comment-craft.md` | Four kudos-first comment frameworks |
+| **craft/** | `comment-craft.md` | Four kudos-first comment frameworks + the texture pack (real opener bank, credential rotation, batch diversity rules) |
 | **craft/** | `newsjack-craft.md` | Reacting to news within 24h without preaching |
 | **craft/** | `blog-craft.md` | Blog format — length, pull quotes, TOC, heading hierarchy, series identity, dual titles, internal linking, lead capture, bio |
 | **craft/** | `edit-craft.md` | Pass 0 preservation + six critique passes, flattening tests, pre-write and self-review checklists |
